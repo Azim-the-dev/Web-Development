@@ -1,0 +1,15 @@
+div {
+    height: 200px;
+    width: 200px;
+    background-color: orange;
+    margin: 0 auto;
+
+    transition: 1s;
+
+    box-shadow: 2px 2px 10px black;
+}
+
+div:hover {
+    background-color: aqua;
+    border-radius: 50%;
+}

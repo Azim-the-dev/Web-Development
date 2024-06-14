@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script>
+        const url = "https://icanhazdadjoke.com/";
+
+        async function azim() {
+            try {
+                let config = {
+                    headers: {
+                        Accept: "application/json"
+                    }
+                };
+
+                let res = await axios.get(url, config);
+                console.log(res.data.joke);
+            } catch (err) {
+                console.log("ERROR >> ", err);
+            }
+        }
+
+        azim();
+    </script>
+</body>
+
+</html>

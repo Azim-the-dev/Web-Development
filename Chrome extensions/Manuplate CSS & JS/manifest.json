@@ -1,0 +1,29 @@
+{
+    "name": "Inject JavaScript",
+    "version": "1.0",
+    "description": "Inject JavaScript Extension",
+    "manifest_version": 3,
+    "action": {
+        "default_icon": "assets/logo.png"
+    },
+    "icons": {
+        "128": "assets/logo.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.youtube.com/*",
+                "https://*.google.com/*"
+            ],
+            "js": [
+                "app.js"
+            ],
+            "css": [
+                "style.css"
+            ]
+        }
+    ]
+}

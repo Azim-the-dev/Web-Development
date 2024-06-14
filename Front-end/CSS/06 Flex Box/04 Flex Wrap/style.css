@@ -1,0 +1,76 @@
+h1 {
+    text-align: center;
+}
+
+/* -------------------------------- */
+
+#container_1 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    flex-wrap: nowrap;
+}
+
+#container_1 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_2 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    flex-wrap: wrap;
+}
+
+#container_2 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_3 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    flex-wrap: wrap-reverse;
+}
+
+#container_3 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+/* Flex Wrap
+ * --> Sets wether items are forced onto one line  or can wrap into multiplr lines
+ * 
+ * -> flex-wrap: nowrap;
+ * -> flex-wrap: wrap;
+ * -> flex-wrap: wrap-reverse;
+ */

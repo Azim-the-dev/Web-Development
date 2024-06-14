@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" style="background-color: black;">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <script>
+        // This a dummy DB funcrion
+        function saveToDB(data) {
+            return new Promise((resolve, reject) => {
+                let internetSpeed = Math.floor(Math.random() * 2);
+                if (internetSpeed == 1) {
+                    resolve("success : data was saved");
+                } else {
+                    reject("failure : weak connectionl");
+                }
+            });
+        }
+
+        saveToDB("Azim")
+            .then(() => {
+                console.log("Promise was resolved!");
+            })
+            .catch(() => {
+                console.log("Promise was rejected!");
+            });
+
+        // Annother way //
+        // let data = "Azim";
+        // let request = saveToDB(data);
+        // request.then(() => {
+        //     console.log("Promise was resolved!");
+        // })
+        //     .catch(() => {
+        //         console.log("Promise was rejected!");
+        //     });
+    </script>
+</body>
+
+</html>

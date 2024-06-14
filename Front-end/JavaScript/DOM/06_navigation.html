@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>This is a H1.</h1>
+    <div class="div">
+        <p>This is a paragraph.</p>
+    </div>
+
+    <div id="div">
+        <a href="https://www.google.com">Google</a>
+        <a id="FB" href="https://www.facebook.com">Facebook</a>
+        <a href="https://www.youtube.com">Youtube</a>
+    </div>
+
+    <script>
+        let p = document.querySelector('p');
+        let div = document.querySelector('#div');
+        let FB = document.querySelector('#FB');
+
+        p.parentElement.style.backgroundColor = 'red';  
+
+        console.log(div.childElementCount); // return how many childern div have
+        div.children[0].style.backgroundColor = 'red'; // Returns array od childern
+
+        FB.previousElementSibling.style.backgroundColor = 'blue';
+        FB.nextElementSibling.style.backgroundColor = 'green';
+    </script>
+</body>
+
+</html>

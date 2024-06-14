@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica, sans-serif;
+    border: border-box;
+    /* box-sizing: border-box; */
+    /* It makes the border inside height and width */
+}
+
+/* Deafult Font size in css is 1rem */
+
+/* ---NAV BAR--- */
+.navbar {
+    height: 3.75rem;
+    background-color: #131921;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* ---BOX 1--- */
+.navbar_logo {
+    height: 3.3rem;
+    width: 7.0rem;
+}
+
+.logo {
+    height: 3.3rem;
+    width: 7.0rem;
+    background-image: url("assets/amazon_logo.png");
+    background-size: cover;
+}
+
+.border {
+    border: 0.0625rem solid transparent;
+}
+
+.border:hover {
+    border: 0.0625rem solid white;
+}
+
+/* ---BOX 2--- */
+.nav_adress {
+    height: 3.3rem;
+    width: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add_icon {
+    display: flex;
+}
+
+.add_first {
+    color: #ccc;
+    font-size: 0.85rem;
+    margin-left: 0.96rem;
+}
+
+.add_second {
+    font-size: 1rem;
+    margin-left: 0.2rem;
+}
+
+/* ---BOX 3--- */
+.nav_serch {
+    display: flex;
+    background-color: #f3a847;
+    width: 52%;
+    height: 2.6rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid #0F1111;
+}
+
+.nav_serch:hover {
+    border: 0.125rem solid #f3a847;
+}
+
+.serch_select {
+    background-color: #f3f3f3;
+    width: 3.125rem;
+    text-align: center;
+    border-radius: 0.25rem 0 0 0.25rem;
+    border: none;
+    outline: none;
+}
+
+.Search_input {
+    width: 100%;
+    border: none;
+    font-size: 0.9rem;
+    padding-left: 0.3rem;
+    outline: none;
+    /* Add this line to remove the border outline */
+}
+
+.serch_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.813rem;
+    font-size: 1.25rem;
+    color: #0F1111;
+}
+
+/* ---BOX 4--- */
+.nav_language {
+    height: 3.3rem;
+    width: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.usa_flag {
+    height: 0.8rem;
+    width: 1.3rem;
+    background-image: url("assets/usa.png");
+    background-size: cover;
+}
+
+.lan_text {
+    padding: 0.1rem 0 0 0.2rem;
+}
+
+.arrow {
+    font-size: 0.7rem;
+    opacity: 0.7;
+    padding: 0.1rem 0 0 0.1rem;
+}
+
+/* ---BOX 5--- */
+
+.acc {
+    display: flex;
+}
+
+.txt_first {
+    color: #ccc;
+    font-size: 0.75rem;
+}
+
+.txt_second {
+    font-size: 0.90rem;
+}
+
+/* ---BOX 6--- */
+.nav_cart {
+    display: flex;
+}
+
+.cart {
+    height: 2rem;
+    width: 2.6rem;
+    background-image: url("assets/cart.png");
+    background-size: cover;
+}
+
+.txt_second2 {
+    margin-top: 1.25rem;
+}
+
+/* ---PANEL--- */
+.paneL {
+    height: 2.5rem;
+    background-color: #222F3D;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.line {
+    display: flex;
+    padding-left: 1.2rem;
+}
+
+.line i {
+    font-size: 1.1rem;
+}
+
+.line P {
+    padding-left: 0.2rem;
+}
+
+.space {
+    width: 64%;
+}
+
+/* ---HERO SECTION--- */
+.hero_section {
+    background-image: url("assets/hero_image.jpg");
+    background-size: cover;
+    height: 21.875rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.hero_msg {
+    background-color: white;
+    color: black;
+    height: 2.5rem;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.85rem;
+    margin-bottom: 1.5625rem;
+}
+
+.hero_msg a {
+    color: #007185;
+    text-decoration: none;
+}
+
+/* ---SHOP SECTION--- */
+.shop_section {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: #E2E7E6;
+}
+
+.box {
+    height: 25rem;
+    width: 23%;
+    background-color: white;
+    padding: 1.25rem 0 0.9375rem;
+    margin-top: 0.9375rem;
+    margin-bottom: 0.9375rem;
+}
+
+.box_img {
+    height: 18.75rem;
+    background-size: cover;
+    margin: 1rem 0 1rem 0;
+}
+
+.box_content {
+    margin: 0 1rem 0 1rem;
+}
+
+.box_content p {
+    color: #007185;
+}
+
+/* ---FOOTER--- */
+.back {
+    background-color: #314054;
+    height: 2.8125rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+
+.back:hover {
+    background-color: #485769;
+}
+
+.back p a {
+    color: white;
+    text-decoration: none;
+    cursor: grab;
+}
+
+.footer {
+    height: 29rem;
+    background-color: #232f3e;
+}
+
+.footer_list {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 3.125rem 12.5rem 0 12.5rem;
+}
+
+.footer_list a {
+    display: block;
+    color: #dddddd;
+    padding-bottom: 0.625rem;
+    font-size: 0.875rem;
+}
+
+.footer_list a:hover {
+    text-decoration: underline;
+}
+
+.footer_list p {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 0.625rem;
+}
+
+footer hr {
+    opacity: 0.1;
+    margin-top: 1.25rem;
+}
+
+.footer_end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.625rem;
+}
+
+.footer_end p {
+    color: white;
+    font-size: 0.8125rem;
+}
+
+.language {
+    height: 1.875rem;
+    width: 8.125rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid rgba(128, 128, 128, 0.508);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.625rem;
+    margin-left: 3.125rem;
+}
+
+.dollar {
+    height: 1.875rem;
+    width: 8.125rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid rgba(128, 128, 128, 0.508);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.625rem;
+}
+
+.us {
+    height: 1.875rem;
+    width: 8.125rem;
+    border-radius: 0.25rem;
+    border: 0.125rem solid rgba(128, 128, 128, 0.508);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.625rem;
+}
+
+.usa_flag {
+    margin-right: 0.4375rem;
+}
+
+/* @media (max-width:1175px) {
+    .nav_sig_in {
+        display: none;
+    }
+    .space {
+        width: 55%;
+    }
+}
+
+@media (max-width:965px) {
+    .nav_language {
+        display: none;
+    }
+    .space {
+        width: 45%;
+    }
+}
+
+@media (max-width:777px) {
+    .nav_cart {
+        display: none;
+    }
+    .space {
+        width: 30%;
+    }
+}
+
+@media (max-width:660px) {
+    .nav_Returns {
+        display: none;
+    }
+    .space {
+        width: 20%;
+    }
+}
+
+@media (max-width:535px) {
+    .nav_logo {
+        display: none;
+    }
+    .nav_adress {
+        display: none;
+    }
+    .space {
+        width: 0%;
+    }
+    .nav_serch {
+        width: 90%;
+    }
+    .paneL {
+        display: none;
+    }
+} */

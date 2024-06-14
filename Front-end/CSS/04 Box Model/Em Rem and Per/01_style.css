@@ -1,0 +1,23 @@
+h1 {
+    border: 2px solid black;
+    width: 50%;
+    /* It meanse 50% of parant tag (here for h1 parant is body) */
+}
+
+#outer {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    margin: 50px;
+
+    font-size: 20px;
+}
+
+#inner {
+    background-color: red;
+    height: 50px;
+    width: 50px;
+    margin: 10%; /* = 20 px (200 % 10 = 20) */
+
+    font-size: 2em; /* = 40px (2 times of 20px) */
+}

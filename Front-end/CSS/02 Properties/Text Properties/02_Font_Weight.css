@@ -1,0 +1,18 @@
+h1 {
+    font-weight: normal;
+}
+
+h2 {
+    font-weight: 400;
+}
+
+p {
+    font-weight: 700;
+}
+
+/* font-weigth: normal  //400
+ * font-weigth: bold   //700
+ * font-weigth: 100
+ * font-weigth: bolder
+ * font-weigth: lighter
+ */

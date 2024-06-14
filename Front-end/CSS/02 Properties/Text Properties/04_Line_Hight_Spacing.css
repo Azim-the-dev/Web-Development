@@ -1,0 +1,14 @@
+h1 {
+    letter-spacing: 10px;
+}
+
+p {
+    line-height: 5;
+}
+
+/*letter-spacing: normal
+ * letter-spacing: 10px
+ *
+ line-hight: normal
+ * line-hight: 2.5
+ */

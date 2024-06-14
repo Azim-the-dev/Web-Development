@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let body = document.querySelector('body');
+        let p = document.createElement('p');
+        let h3 = document.createElement('h3');
+        let div = document.createElement('div');
+        let input = document.createElement('input');
+        let button = document.createElement('button');
+
+        p.innerHTML = "Hello World";
+        p.style.color = 'red';
+        h3.innerText = "Hello World";
+        h3.style.color = 'red';
+        div.style.height = "100px";
+        div.style.width = "100px";
+        div.style.backgroundColor = 'blue';
+        input.setAttribute('placeholder', 'Enter');
+        button.innerHTML = 'Click Me';
+        button.style.backgroundColor = 'blue';
+        button.style.color = 'white';
+        
+
+        body.appendChild(h3);
+        body.appendChild(div);
+        div.appendChild(p);
+        body.appendChild(input);
+        body.appendChild(button);
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+div {
+    height: 200px;
+}
+
+div {
+    width: 500px;
+}
+
+h1 {
+    text-align: center;
+    border: 2px dashed blue;
+    border-left: 2px solid black;
+    /* Border Shorthand */
+}
+
+div {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+
+    border-right-width: 2px;
+    border-right-color: blue;
+    border-right-style: dashed;
+}
+
+div {
+    border-radius: 10px;
+    border-top-right-radius: 50px;
+}
+
+button {
+    border: 2px dashed black;
+    border-radius: 10px;
+
+    padding-top: 5px;
+    padding-right: 25px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+
+    /* padding: 5px 25px 5px 15px; */
+}
+
+div {
+    margin: 10px 50px 20px 50px;
+    /* Marginr rouls are same like padding */
+}
+
+h1 {
+    display: inline;
+}
+
+h1 {
+    display: block;
+}

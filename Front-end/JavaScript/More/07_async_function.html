@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        async function azim() {
+            throw "404 page not found!";
+            return "Hello Azim";
+        }
+
+        azim()
+        .then((result) => {
+            console.log("Promise Was resolved!");
+            console.log("result : ", result);
+        })
+        .catch((err) => {
+            console.log("promise was rejected with err : ", err);
+        })
+    </script>
+</body>
+
+</html>

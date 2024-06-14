@@ -1,0 +1,10 @@
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    /* After 'Arial' those are backup fonts */
+}
+
+/* cssfontstack.com */

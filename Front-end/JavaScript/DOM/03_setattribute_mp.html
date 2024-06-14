@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        #red {
+            color: red;
+        }
+
+        #green {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="azim">Sk Azim</h1>
+
+    <script>
+        let name = document.querySelector('#azim');
+
+        console.log(name.getAttribute('id')); // Now id is azim (deafult)
+        name.setAttribute('id', 'red'); // Change id to red
+        console.log(name.getAttribute('id')); // now id is red
+    </script>
+</body>
+
+</html>

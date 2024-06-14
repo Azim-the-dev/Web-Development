@@ -1,0 +1,109 @@
+html {
+    background-color: black;
+}
+
+body {
+    display: block;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -2;
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+.content {
+    z-index: 1;
+}
+
+#vid {
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    object-fit: cover;
+    transform: scaleX(-1);
+}
+
+#bc-cam {
+    border-radius: 8px;
+    position: absolute;
+    right: 0;
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    z-index: -1;
+    background-color: black;
+}
+
+.buttons {
+    /* background-color: #ffffff13; */
+    /* backdrop-filter: blur(3px);  */
+    background: linear-gradient(to bottom, #ffffff00, #000000);
+    height: 120px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons div {
+    background-color: white;
+    color: black;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.buttons #call-camers {
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+.buttons #call-reject {
+    background-color: #cc0000;
+    color: white;
+    rotate: 135deg;
+    height: 75px;
+    width: 75px;
+}
+
+.buttons #call-mute {
+    font-size: 19px;
+    margin-right: 20px;
+}
+
+.none {
+    display: none;
+}
+
+@media (max-width:767px) {
+}

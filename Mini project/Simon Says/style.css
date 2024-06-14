@@ -1,0 +1,93 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    transition: 1s;
+}
+
+h1 {
+    cursor: grab;
+}
+
+h2 {
+    margin: 0;
+    padding: 0;
+    color: green;
+}
+
+p {
+    color: white;
+    font-size: large;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    height: 200px;
+    width: 200px;
+    border-radius: 20%;
+    /* border: 10px solid black; */
+    margin: 1.4rem;
+    margin-top: 2.8rem;
+    transition: 0.1s;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.red {
+    background-color: #d44f4f;
+}
+
+.orange {
+    background-color: #fa8f3a;
+}
+
+.aqua {
+    background-color: #57a0b8;
+}
+
+.blue {
+    background-color: #7693f8;
+}
+
+.flash {
+    background-color: white;
+}
+
+.userflash {
+    background-color: rgba(0, 128, 0, 0.356);
+}
+
+/* .one{
+    height: 40%;
+    width: 35%;
+    border-right: 1px solid black;
+}
+
+.two{
+    height: 40%;
+    width: 65%;
+}
+
+.three{
+    height: 60%;
+    width: 35%;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.four{
+    height: 60%;
+    width: 65%;
+    border-top: 1px solid black;
+} */

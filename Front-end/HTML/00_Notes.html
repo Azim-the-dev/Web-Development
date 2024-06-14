@@ -1,0 +1,226 @@
+// HYPER TEXT MARKUP LANGUAGE TAGS //
+
+<!--Day 1-->
+
+Paragraph Tag🔽
+<p>This is a Paragraph</p>
+
+Heading Tag🔽
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<!--Day 2-->
+
+List🔽
+<ul> <!--Uordered List-->
+    <li>Azim</li> <!--List iteam-->
+    <li>Arya</li>
+    <li>Alam</li>
+    <li>Azim</li>
+</ul>
+
+<ol> <!--Ordered List-->
+    <li>Azim</li>
+    <li>Arya</li>
+    <li>Alam</li>
+    <li>Azim</li>
+</ol>
+
+<ol type="i">
+    <li>Azim</li>
+    <li>Arya</li>
+    <li>Alam</li>
+    <li>Azim</li>
+</ol>
+
+Attributes🔽
+<!--Attributes are used to add more ifromati to the tag -->
+E.G> <h1 align="center">HELLO WORLD</h1>
+
+Anchor Tag🔽
+<a href="https://chat.openai.com/">ChatGPT</a>
+<br>
+<a href="01_First.html">Go To First.html</a>
+
+Image Elemet🔽
+<img src="HTML.png" alt="HTML_Logp">
+<br>
+<img src="https://upload.Wikimedia.org/wikipedia/commons/thumb/b/b9/Marvel_Logo.svg/2560px-Marvel_Logo.svg.png"
+    alt="MARVEL Logo">
+
+Br Tag🔽
+<br>
+
+Horizontal tag🔽
+<hr>
+
+Bold Tag🔽
+<b>Bold</b>
+
+Italic Tag🔽
+<i>Italic</i>
+
+Underline Tag🔽
+<u>Underline</u>
+
+<!-- HTML is not case sensitive -->
+
+<!-- Day 3-->
+
+Inline vs Block🔽
+
+Inline --> Takes only necessary width
+
+Block --> Takes fill-width avalable
+
+E.G:
+Inline
+-> -> ->
+
+Block
+->
+->
+->
+
+Div Element🔽
+<div> <!--Devide-->
+    <a href="www.google.com">Google</a>
+</div>
+<a href="www.google.com">Google</a>
+
+Span element🔽
+<span> <!--Make group of element-->
+    <a href="www.youtube.com">YouTube</a>
+    <a href="www.youtube.com">YouTube</a>
+</span>
+<a href="www.youtube.com">YouTube</a>
+
+sub & sup tag🔽
+<h1>a<sup>2</sup></h1>
+<h1>H<sub>2</sub></h1>
+
+<!-- Sementic Markup -->
+<header></header> <!--For top part-->
+<main></main> <!--For main content-->
+<footer></footer> <!--For last part-->
+<nav></nav> <!--For navication-->
+
+<article></article> <!--USe for article and more-->
+<section></section> <!--Use for section-->
+<aside></aside> <!--use for indirected related info-->
+
+
+<!--Use header main footer nav one time in a website-->
+
+Entities🔽
+<!-- 
+&amp; = &
+&lt; = < 
+&gt; = >
+&quot; = "
+-->
+
+Emmit🔽
+-> https://docs.emmet.io/cheat-sheet/
+
+<!-- Day 4 -->
+
+Table🔽
+
+<table border="black"> <!--This is jugad-->
+    <caption>Data</caption>
+    <tr><!--Table Row-->
+        <th>Azim</th><!--Teable Head-->
+        <th>01</th>
+    </tr>
+
+    <tr>
+        <td>Arya</td><!--Teable Data-->
+        <td>02</td>
+    </tr>
+
+    <tr>
+        <td>Aziz</td>
+        <td>035</td>
+    </tr>
+</table>
+<!-- Do't use border in HTML Use in CSS -->
+
+Semantic in table🔽
+<thead><!--For header--></thead>
+<tbody><!--For Body--></tbody>
+<tfoot><!--For footer--></tfoot>
+
+Rowspan And Colspan🔽
+<table border="black">
+    <thead>
+        <caption>Food Menu</caption>
+        <tr>
+            <th rowspan="2">Iteam</th>
+            <th colspan="25">Price</th>
+        </tr>
+
+        <tr>
+            <th>INR</th>
+            <th>USD</th>
+        </tr>
+    </thead>
+
+Forms🔽
+<form>
+    <!--Form Content-->
+</form>
+<form action="/action.js"></form>
+
+Input🔽
+--> https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input
+
+<form action="/action">
+    <input type="text">
+</form>
+🔽
+<form action="00_Notes.html">
+    Name:
+    <input type="text" placeholder="Enter your name">
+</form>
+🔽
+<form action="00_Notes.html">
+    <div>
+        <label for="user">Name : </label>
+        <input type="text" placeholder="Enter your name" id="user">
+    </div>
+
+    <br>
+
+    <div>
+        <label for="user2">Name : </label>
+        <input type="text" placeholder="Enter your name" id="user2">
+    </div>
+</form>
+
+Button🔽
+<form align="center" action="/Action">
+    <div>
+        <label for="user">Name : </label>
+        <input type="text" placeholder="Enter your name" id="user">
+    </div>
+
+    <br>
+    <div>
+        <button type="button">Do Nothing</button>
+        <button type="submit">Submit</button>
+        <button>Submit</button>
+        <button type="reset">Reset</button>
+    </div>
+
+    <!-- Buttom Using Input TAg -->
+    <br>
+    <div>
+        <input type="button" value="HI">
+        <input type="submit" value="Submit By Input Tag">
+    </div>
+</form>

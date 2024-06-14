@@ -1,0 +1,33 @@
+body {
+    color: #acacacef;
+    background-color: #202124;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.space {
+    height: 50px;
+}
+
+.dino {
+    height: 100px;
+}
+
+header img {
+    filter: invert(1);
+}
+
+a {
+    text-decoration: none;
+    color: #ACACAC;
+}
+
+/* .blue {
+    color: rgba(138, 180, 248, 1);
+} */
+
+span {
+    color: rgba(138, 180, 248, 1);
+}

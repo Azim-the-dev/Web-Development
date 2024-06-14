@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="Type Something">
+
+    <script>
+        let input = document.querySelector('input');
+
+        input.addEventListener('keydown', function (event) {
+            console.log(event.key);
+            console.log('key pressed....');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">SK AZIM</h1>
+
+    <script>
+        let h1 = document.querySelector('h1');
+
+        // 1St
+        // setInterval(() => { 
+        //     if (Math.floor(Math.random() * 2) == 0) {
+        //         h1.style.backgroundColor = 'green'
+        //     } else if (Math.floor(Math.random() * 2) == 1) {
+        //         h1.style.backgroundColor = 'red'
+        //     } else {
+        //         h1.style.backgroundColor = 'gray'
+        //     }
+        // }, 1000);
+
+        // for (let i = 0; i <= 1000; i++) {
+        //     console.log(i);
+        // }
+
+        // 2nd
+        // setInterval(() => {
+        //     h1.style.backgroundColor = 'red';
+        // }, 1000);
+
+        // setInterval(() => {
+        //     h1.style.backgroundColor = 'green';
+        // }, 2000);
+
+        // setInterval(() => {
+        //     h1.style.backgroundColor = 'blue';
+        // }, 3000);
+
+        // 3rd
+        // function setColor(color, time) {
+        //     setInterval(() => {
+        //         h1.style.backgroundColor = color;
+        //     }, time);
+        // }
+
+        // setColor("red", 1000);
+
+        // 4th
+        function setColor(color, time, nextColorChange) {
+            setTimeout(() => {
+                h1.style.backgroundColor = color;
+                if (nextColorChange) nextColorChange();
+            }, time);
+        }
+
+        setColor("red", 1000, () => {
+            setColor("green", 1000, () => {
+                setColor("blue", 1000, () => {
+                    setColor("black", 1000);
+                });
+            });
+        });
+
+        // This is Callbacks nastimg -> Callback hell 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promises</title>
+</head>
+
+<body>
+    <h1 style="text-align: center;">SK AZIM</h1>
+
+    <script>
+        let h1 = document.querySelector('h1');
+
+        function setColor(color, time) {
+            return new Promise((resolve, reject) => {
+                if (true) {
+                    reject("Rejected by Azim");
+                }
+                setTimeout(() => {
+                    h1.style.backgroundColor = color;
+                    console.log(`Color Changed to ${color}`);
+                    resolve(`Color Changed to ${color}`);
+                }, time);
+            });
+        }
+
+        async function call_color() {
+            try { // IMP
+                await setColor("red", 1000);
+                await setColor("green", 1000);
+                await setColor("blue", 1000);
+            } catch (err) {
+                console.log(err);
+            }
+
+            console.log("Print Me");
+            // Use try catch othrt wise this line will not be printrd After an error
+        }
+
+        call_color();
+
+
+
+
+        // // // DEVIDER // // //
+
+
+
+
+        // This a dummy DB funcrion
+        function saveToDB(data) {
+            return new Promise((resolve, reject) => {
+                let internetSpeed = Math.floor(Math.random() * 2);
+                if (internetSpeed == 1) {
+                    resolve("success : data was saved");
+                    console.log("data was saved");
+                } else {
+                    reject("failure : weak connectionl");
+                }
+            });
+        }
+
+        async function call() {
+            try {
+                await saveToDB("Azim1");
+                await saveToDB("Azim2");
+                await saveToDB("Azim3");
+                await saveToDB("Azim4");
+                await saveToDB("Azim5");
+            } catch(err) {
+                console.log(err);
+            }
+
+            console.log("Print me");
+        }
+
+        // call();
+
+
+
+    </script>
+</body>
+
+</html>

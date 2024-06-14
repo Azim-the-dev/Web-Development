@@ -1,0 +1,50 @@
+div {
+    width: 80%;
+    height: 100px;
+    background-color: orange;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 30px;
+
+    /* animation-name: Azim; */
+    /* animation-duration: 2s; */
+    /* animation-timing-function: ease-in; */
+    /* animation-delay: 3s; */
+    /* animation-iteration-count: infinite; */
+    /* How many time EG: 4, 12, infinite */
+    /* animation-direction: normal; */
+    /* Direction EG: normal reverse alternate */
+
+    animation: Azim 2s ease-in 3s infinite normal;/
+}
+
+@keyframes Azim {
+    from {
+        font-size: 30px;
+    }
+
+    to {
+        font-size: 80px;
+    }
+}
+
+@keyframes Azim_2 {
+    0% {
+        font-size: 30px;
+    }
+
+    50% {
+        font-size: 60px;
+    }
+
+    100% {
+        font-size: 30px;
+    }
+}
+
+/* Animation Syntax:
+   -> animation: name duration timing-function delay iteration-count direction fill-mode; */

@@ -1,0 +1,9 @@
+button {
+    font-size: 50px;
+    border: 5px solid black;
+    border-radius: 15px;
+
+    padding-left: 1em;
+    padding-right: 1em; /*/ = 50px /*/
+    /* Now this is kind of responsuve */
+}

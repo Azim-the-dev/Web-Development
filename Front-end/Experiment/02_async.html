@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #282828;">
+    <script>
+        let internet = {
+            speed: () => {
+                return Math.floor(Math.random() * 2)
+            }
+        }
+
+        async function callAzim(name) {
+            console.log(internet.speed());
+            if (internet.speed()) {
+                console.log("Your name is: ", name);
+            } else {
+                throw "err";
+            }
+            return "AZIM";
+        }
+
+        callAzim("Azim")
+            .then((msg) => {
+                console.log(msg);
+            })
+            .catch((msg) => {
+                console.log(msg);
+            });
+    </script>
+</body>
+
+</html>

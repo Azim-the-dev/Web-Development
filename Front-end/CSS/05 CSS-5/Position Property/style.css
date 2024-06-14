@@ -1,0 +1,41 @@
+div {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    text-align: center;
+    border: 3px solid black;
+    margin: 20px;
+    display: inline-block;
+}
+
+#Static {
+    background-color: yellow;
+    position: static;
+    /* Not move due to static */
+    top: 100px;
+    left: 100px;
+}
+
+#Relative {
+    background-color: yellow;
+    position: relative;
+    /* It meamse it will move from his center */
+    top: 50px;
+    left: 50px;
+}
+
+#Absolute {
+    background-color: yellow;
+    position: absolute;
+    /* It meamse it will move from his closest ensister (in this case body) */
+    top: 50px;
+    left: 50px;
+}
+
+#Fixed {
+    background-color: yellow;
+    position: fixed;
+    /* It Fixed om the screen */
+    top: 100px;
+    left: 100px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizing the Call Stack</title>
+</head>
+
+<body>
+    <script>
+        function one() {
+            return 1
+        }
+
+        function two() {
+            return one() + one();
+        }
+
+        function three() {
+            return one() + two();
+        }
+
+        console.log(three());
+
+        // Call Stack visulation
+
+        //     |   one()   |
+        //     |   one()   |
+        //     |   two()   |
+        //     |   one()   | X
+        //     |  three()  |
+        //      _ _ _ _ _ _
+
+        // This call stack is not 100% correct
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="/actiom">
+        <input placeholder="Enter" type="text">
+        <button>submit</button>
+    </form>
+
+    <script>
+        let form = document.querySelector('form');
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+        });
+
+        let input = document.querySelector('input');
+        // input.addEventListener('change', function () {
+        input.addEventListener('input', function () {
+            console.log(this.value);
+        });
+    </script>
+</body>
+
+</html>

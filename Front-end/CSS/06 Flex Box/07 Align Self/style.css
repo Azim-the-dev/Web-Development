@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+
+#container {
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    align-items: self-end;
+}
+
+#container div {
+    height: 100px;
+    width: 300px;
+    color: wheat;
+    text-align: center;
+    font-size: 25px;
+}
+
+#green {
+    align-self: self-start;
+}
+
+/* [Align Self >> Align items] */
+
+/* Align Self
+ * --> Alins an item along the cross axis
+ * 
+ * -> align-self: flex-start;
+ * -> align-self: flex-end;
+ * -> align-self: center;
+ * -> align-self: baseline;
+ */

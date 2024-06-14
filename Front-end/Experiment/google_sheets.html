@@ -1,0 +1,64 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method="POST"
+        action="https://script.google.com/macros/s/AKfycbzu6L8nvNhAIMAwSMQqzNqOGLTZFkxz35vGJRm03OyHsrQlMcfDeSZF_JnWZul1mnuPgg/exec">
+        <input name="Email" type="email" placeholder="Email" required>
+        <input name="Name" type="text" placeholder="Name" required>
+        <button type="submit">Send</button>
+    </form>
+</body>
+</html> -->
+
+
+
+<!-- CHAT GPT'S CODE -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="myForm">
+        <input name="Email" type="email" placeholder="Email" required>
+        <input name="Name" type="text" placeholder="Name" required>
+        <button type="button" onclick="submitForm()">Send</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('myForm');
+            const formData = new FormData(form);
+
+            fetch('https://script.google.com/macros/s/AKfycbzu6L8nvNhAIMAwSMQqzNqOGLTZFkxz35vGJRm03OyHsrQlMcfDeSZF_JnWZul1mnuPgg/exec', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        // Handle success, like showing a success message or redirecting to another page
+                        console.log('Form submitted successfully');
+                    } else {
+                        // Handle error
+                        console.error('Error submitting form');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting form:', error);
+                });
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- github link: https://github.com/levinunnink/html-form-to-google-sheet?tab=readme-ov-file -->

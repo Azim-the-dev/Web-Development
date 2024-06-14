@@ -1,0 +1,166 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 600px;
+    width: 350px;
+    border-radius: 25px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+button {
+    height: 70px;
+    width: 70px;
+    margin: 3px;
+    margin-top: 9px;
+    border: transparent;
+    border-radius: 50%;
+    color: white;
+    font-size: 25px;
+    background-color: #333333;
+    cursor: pointer;
+    outline: none;
+    transition: 0.1s;
+}
+
+button:active {
+    background-color: #5d5d5d;
+    border-radius: 20px;
+}
+
+.zero-btn {
+    width: 150px;
+    border-radius: 55px;
+}
+
+.zero-btn:active {
+    border-radius: 24px;
+}
+
+.operator-btn {
+    font-size: 28px;
+    background-color: #ffa00b;
+}
+
+.operator-btn:active {
+    background-color: #ffba4c;
+}
+
+.top-btn {
+    color: black;
+    background-color: #a4a4a4;
+    font-size: 20px;
+}
+
+.top-btn:active {
+    background-color: #c7c7c7;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+    width: 315px;
+    height: 106.4px;
+    display: flex;
+    justify-content: center;
+}
+
+.inputs input {
+    background-color: transparent;
+    border: transparent;
+    text-align: right;
+    margin: 2px;
+    height: 50px;
+    color: #ffffffc3;
+    font-size: 25px;
+    padding-right: 20px;
+    outline: none;
+    cursor: default;
+    /* direction: rtl; */
+}
+
+.inputs input::placeholder {
+    color: #ffffffc3;
+    opacity: 1;
+    font-size: 25px;
+}
+
+#result-txt {
+    color: white;
+    font-size: 35px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    text-align: right;
+    transition: 0.2s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.buttom {
+    height: 4px;
+    width: 125px;
+    border-radius: 10px;
+    background-color: #dedede;
+    position: absolute;
+    bottom: 8px;
+    cursor: grab;
+}
+
+@media (max-width:480px) {
+    body {
+        height: 92vh;
+        background-color: black;
+    }
+
+    .buttom {
+        display: none;
+    }
+    
+    .container {
+        width: 100%;
+        border-radius: 0px;
+    }
+    
+    button {
+        height: 80px;
+        width: 80px;
+        margin-top: 12px;
+    }
+
+    .zero-btn {
+        width: 169.96px;
+    }
+
+    #result-txt {
+        padding-right: 0px;
+        padding-bottom: 0px;
+    }
+
+    .inputs input {
+        margin: 2px;
+        padding: 0px;
+    }
+}

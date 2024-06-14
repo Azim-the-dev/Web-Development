@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background-color: #2b2b2b;">
+    <script>
+        let url = 'https://v2.jokeapi.dev/joke/Any?safe-mode';
+
+        async function getJoke() {
+            try {
+                let response = await fetch(url);
+                let data = await response.json();
+                console.log(data);
+            } catch (err) {
+                console.log("Error!");
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,98 @@
+h1 {
+    text-align: center;
+}
+
+/* -------------------------------- */
+
+#container_1 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    align-items: flex-start;
+}
+
+#container_1 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_2 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    align-items: flex-end;
+}
+
+#container_2 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_3 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    align-items: center;
+}
+
+#container_3 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_4 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    align-items: baseline;
+}
+
+#container_4 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+/* Align Items
+ * --> Distributes our items along the cross axis
+ * 
+ * -> align-items: flex-start;
+ * -> align-items: flex-end;
+ * -> align-items: center;
+ * -> align-items: baseline;
+ */

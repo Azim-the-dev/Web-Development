@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let arr1 = [1];
+        let arr2 = [1];
+        
+        console.log(arr1 == arr2);
+        console.log(arr1 === arr2);
+        // Both are false due to different memory locations.
+
+        let arr3 = arr1;
+        console.log(arr3 == arr1);
+        console.log(arr3 === arr1);
+        // Both are true because they reference the same memory location.
+
+        // Since the memory locations are the same, if I change arr3 it will affect arr1.
+        arr3.push(2);
+        console.log(arr3, arr1); // > Boath are [1, 2]
+    </script>
+</body>
+
+</html>

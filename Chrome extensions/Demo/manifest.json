@@ -1,0 +1,16 @@
+{
+    "name": "Demo Extension",
+    "version": "1.0",
+    "description": "Demo Extension",
+    "manifest_version": 3,
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "assets/logo.png"
+    },
+    "icons": {
+        "128": "assets/logo.png"
+    },
+    "permissions": [
+        "activeTab"
+    ]
+}

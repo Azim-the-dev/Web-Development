@@ -1,0 +1,112 @@
+h1 {
+    text-align: center;
+}
+
+/*/ flex-basis /*/
+
+#container_1 {
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+#container_1 div {
+    height: 100px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+#green_1 {
+    flex-basis: 200px;
+    /* It sets the initial main sixe of a flex item */
+}
+
+/* --------------------------------------------- */
+
+/*/ flex-grow /*/
+/*/ --> It specifies how much of the flex container's remaning shoud be assigned to the flex item's main size */
+
+#container_2 {
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+#container_2 div {
+    height: 100px;
+    width: 100px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+#green_2 {
+    flex-grow: 1;
+    max-width: 200px;
+    min-width: 100px;
+}
+
+#orange_2 {
+    flex-grow: 2;
+}
+
+/* --------------------------------------------- */
+
+/*/ flex-shrink /*/
+/*/ --> It sets the flex shrink factor of a flex item */
+
+#container_3 {
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+}
+
+#container_3 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+#green_3 {
+    flex-shrink: 2;
+}
+
+#orange_3 {
+    flex-shrink: 1;
+}
+
+/* By-Deaful grow and ahrink value are: 1 */
+
+/*/ Flex Shorthand 
+ *
+ * -> Flex-grow | flex-shrink | flex-basis
+ * --> flex: 2 2 100px;
+ * 
+ * -> Flex-grow | flex-basis
+ * --> flex: 1 100px;
+ *
+ * -> Flex-grow (unitless)
+ * --> flex: 2;
+ *
+ * -> flex-basis
+ * --> flex: 100px;
+ */

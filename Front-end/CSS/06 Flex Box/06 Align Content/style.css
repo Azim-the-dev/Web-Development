@@ -1,0 +1,169 @@
+h1 {
+    text-align: center;
+}
+
+/* -------------------------------- */
+
+#container_1 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: flex-start;
+}
+
+#container_1 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_2 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: flex-end;
+}
+
+#container_2 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_3 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-items: center;
+}
+
+#container_3 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_4 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: space-between;
+}
+
+#container_4 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_5 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: space-around;
+}
+
+#container_5 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_6 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: space-evenly;
+}
+
+#container_6 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_7 {
+    height: 500px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+
+    align-content: baseline;
+}
+
+#container_7 div {
+    height: 100px;
+    width: 300px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+/* Align content
+ * --> Distributes our content along the cross axis
+ * 
+ * -> align-content: flex-start / flex-end / center
+ * -> align-content: space-between / space-around / space-evenly
+ * -> align-content: baseline;
+ */
+
+/* Write a code to demonstrate diffrance between align-content and align-items */

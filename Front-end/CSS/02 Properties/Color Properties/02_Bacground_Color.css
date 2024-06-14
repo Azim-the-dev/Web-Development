@@ -1,0 +1,14 @@
+h1 {
+    color: coral;
+    background-color: blue
+}
+
+p {
+    color: #00ff00;
+    background-color: rgb(255, 127, 127);
+}
+
+button {
+    color: rgb(255, 0, 0);
+    background-color: #00ff00;
+}

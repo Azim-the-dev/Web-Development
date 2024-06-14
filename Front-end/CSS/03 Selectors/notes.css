@@ -1,0 +1,138 @@
+* {
+    font-family: 'Segoe UI';
+    /* This is universal selector */
+}
+
+h1 {
+    color: red;
+    /* This is element delector */
+}
+
+h1,
+h3 {
+    color: green;
+    /* This is multiple element delector */
+}
+
+#myid {
+    color: blue;
+    /* This is ID Selector */
+}
+
+.myclass {
+    background-color: green;
+    /* This is class selector */
+}
+
+p a {
+    color: purple;
+    background-color: yellow;
+    /* This is descendant selector */
+    /* It can be more labels */
+    /* EG: Select all A inside P */
+}
+
+p+h3 {
+    text-decoration: underline;
+    /* This is sibling combinator */
+    /* EG: H3 that comes immediately after any P SELECTED */
+}
+
+div>input {
+    background-color: brown;
+    color: black;
+    /* Child Combinator */
+    /* EG: Select all buttons which are direct children of div */
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*/ Psudo Class /*/
+/* A keyword to a selector that specifies a spacial stste of the selected element
+ * :hover --> Change when mouse hovering
+ * :active --> EG: When the button is clicked
+ * :Checked --> EG: When radio/option is checked
+ * :nth-of-type --> EG->
+ *            nth-of-type(2)       nth-of-type(2n)
+ *                 []                   [] 
+ *                 [] *                 [] *
+ *                 []                   []
+ *                 []                   [] *
+ Examples:-> /*/
+
+button:hover {
+    background-color: black;
+    /* It meanse when i hover over button background-color will be black */
+}
+
+button:active {
+    background-color: blue;
+    /* It meanse when i click button background-color will be blue */
+}
+
+input[type="radio"]:checked+label {
+    color: red;
+    /* ... + lable -> Because lebel is sibling of input_radio */
+}
+
+footer div:nth-of-type(2n) {
+    background-color: green;
+    /* It meanse inside footer every second div background-color will be green */
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/* Psudo Elements */
+/* A keyword added to a selector that lets you style a specific part of the selected element(s) 
+ * ::first-letter --> Selects first letter
+ * ::first-line --> Selects first line
+ * ::selection --> Selected text inside an element
+ Examples:-> /*/
+
+h1::first-letter {
+    color: green;
+    /* Make the first letter of every H1 element green */
+}
+
+#Quora::first-line {
+    color: red;
+    /* Make the first line of an element red */
+}
+
+#Quora::selection {
+    color: yellowgreen;
+    /* Make the selected text inside an element yellow-green */
+}
+
+/*-----------------------------------------------------------------------------*/
+
+/*/ Selector Specificity /*/
+/*/
+ * --> [ ID ] >> [CLASS] >> [ELEMENT]
+ *
+ * --> more selectors > less selectors 
+ *
+ * --> If Specificity same ->  Cascading 
+ * EG:>h1 {                 
+ *         color: green;    
+ *     }                    
+ *     h1 {                 
+ *         color: red; <--> Final color is red
+ *     }   
+ *    
+ * --> [INLINE STYLE] >> [ ID ] >> [CLASS] >> [ELEMENT]
+ *
+ * --> h1 {
+ *        background-color: blue !important; <--> To show the most specific thing in CSS (More than inline)
+ *    }                                      <--> [!IMPORTANT] >> [INLINE STYLE] >> [ ID ] >> [CLASS] >> [ELEMENT]
+/*/
+
+/*-----------------------------------------------------------------------------*/
+/* Iinheritance in CSS */
+/* By deafult some tags tags does not inheritance. Like input,button etc... */
+/* Some elements are non-inheritable. Like width,higth,border etc... */
+
+input {
+    background-color: inherit;
+}
+/* Fore more -> Practice/inheritance_demo.html */

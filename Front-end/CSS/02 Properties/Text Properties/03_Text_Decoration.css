@@ -1,0 +1,20 @@
+h1 {
+    text-decoration: wavy red underline;
+}
+
+h2 {
+    text-decoration: overline;
+}
+
+p {
+    text-decoration: green line-through;
+}
+
+/* text-decoration: underline
+ * text-decoration: overline
+ * text-decoration:line-through
+ */
+ /* text-decoration: red underline;
+  * text-decoration: wavy underline
+  * text-decoration: dotted overline
+  */

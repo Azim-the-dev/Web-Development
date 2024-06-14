@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: white;
+            font-size: 20px;
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body style="background-color: #2b2b2b;">
+    <script>
+        function dataSave() {
+            let count = 1;
+
+            function delay() {
+                return Math.floor(Math.random() * 5000);
+            }
+
+            function dummyDataBase() {
+                return new Promise((res, rej) => {
+                    setTimeout(() => {
+                        const p = document.createElement('p');
+                        p.textContent = `Data ${count} saved!`;
+                        document.body.appendChild(p);
+                        res(`Data ${count++}`);
+                    }, delay());
+                });
+            }
+
+            async function postData() {
+                try {
+                    console.log("Sending Data...");
+                    await dummyDataBase();
+                    await dummyDataBase();
+                    await dummyDataBase();
+                    await dummyDataBase();
+                    await dummyDataBase();
+                    await dummyDataBase();
+                    console.log("Done!");
+                } catch (err) {
+                    console.log("Error!");
+                }
+            }
+
+            postData();
+        }
+
+        dataSave();
+
+        // for (let i = 0; i < 100000; i++) {
+        //     console.log(i);
+        // }
+    </script>
+</body>
+
+</html>

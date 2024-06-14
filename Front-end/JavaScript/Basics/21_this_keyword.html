@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            name: "Azim",
+            age: 20,
+            printf() {
+                // console.log(`Name: ${name} age ${age}`); // Error!!
+                console.log(`Name: ${this.name} age ${this.age}`);
+            }
+        }
+
+        console.log(student.printf());
+    </script>
+</body>
+
+</html>

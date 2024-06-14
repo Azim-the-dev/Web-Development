@@ -1,0 +1,117 @@
+/*/ Height /*/
+div {
+    height: 200px;
+}
+
+/*/ Width /*/
+div {
+    width: 200px;
+}
+
+/*/ Border /*/
+div {
+    border-width: 2px;
+    border-style: solid;
+    border-color: black;
+
+    /* Border Sides */
+    /* To control an individual side of the box Like: */
+    /* border-left, border-right, border-top, border-bottom */
+    border-right-width: 2px;
+    border-right-color: blue;
+    border-right-style: dashed;
+}
+
+/*/ Border Shorthand /*/
+h1 {
+    text-align: center;
+    border: 2px dashed blue;
+    border-left: 2px solid black;
+}
+
+/*/ Border Radius /*/
+div {
+    border-radius: 10px;
+    /* It is ushed to make round corners */
+
+    border-top-right-radius: 50px;
+}
+
+/*/ Padding /*/
+button {
+    padding-left: 15px;
+    padding-right: 25px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+/* Padding Shorthands (Same Shorthands for marginr too)
+ *
+ * 1. For all 4 sides
+ *    --> padding: 50px;
+ *
+ * 2. Top & bottom | left & right 
+ *    --> padding: 1px 2px;
+ *
+ * 3. Top | left & right | bottom
+ *    --> padding: 1px 2px 3px;
+ *
+ * 4. Top | right | bottom | left (Clockwise)
+ *    --> padding: 1px 2px 3px 4px;
+ */
+
+/*/ Margin /*/
+div {
+    margin: 0px 50px 0px 50px;
+    /* Marginr rouls are same like padding */
+    /* So i am not writing Shorthands againg  */
+}
+
+/*/ Display Property /*/
+
+/* Inline & Block 
+ * --> Inline takes the full-width avalable
+ * --> Inline starts from a new line
+ *
+ * --> Block takes only necessary width
+ * --> Block don't starts from a new line
+ */
+
+h1 {
+    display: inline;
+}
+
+h1 {
+    display: block;
+}
+
+div {
+    background-color: blue;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+    border: 5px solid black;
+    /* display: inline; (Won't work because inline does not acept some propertys)*/
+    display: inline-block;
+}
+
+#hide {
+    display: none; /* Used to hide */
+}
+
+h1 {
+    border: 2px solid black;
+    width: 50%;
+    /* It meanse 50% of parant tag (here for h1 parant is body) */
+}
+
+button {
+    font-size: 50px;
+    border: 5px solid black;
+    border-radius: 15px;
+
+    padding-left: 1em;
+    padding-right: 1em; /* = 50px*/
+}
+
+/* More em, rem and pertange at: /Em Rem and Per(Directry) */

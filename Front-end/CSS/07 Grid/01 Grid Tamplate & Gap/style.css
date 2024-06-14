@@ -1,0 +1,62 @@
+/* CSS Grid
+ * --> Setting a container's display to grid will make [all] children grid items 
+ */
+
+h3 {
+    text-align: center;
+}
+
+#container_1 {
+    width: 500px;
+    height: 300px;
+    background-color: gray;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-rows: 60px 60px 60px 60px 60px;
+    grid-template-columns: 125px 125px 125px 125px;
+
+    /* grid-template-rows: auto auto;
+    grid-template-columns: auto auto auto; */
+    /* You can use 'auto' too */
+}
+
+.item_1 {
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 2px solid black;
+    text-align: center;
+}
+
+/* -------------------------------------------------- */
+
+#container_2 {
+    width: 500px;
+    height: 300px;
+    background-color: gray;
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    /* grid-template-columns: 1fr 1fr 1fr; */
+
+    row-gap: 10px;
+    column-gap: 10px;
+
+    /* Short Handa */
+    /* grid-gap: 10px;
+    grid-gap: 10px 20px; */
+}
+
+.item_2 {
+    /* width: 100px;
+    height: 50px; */
+
+    background-color: rgb(255, 225, 0);
+    border: 2px solid black;
+    text-align: center;
+}

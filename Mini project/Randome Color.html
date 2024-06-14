@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        button {
+            height: 30px;
+            width: 90px;
+            background-color: yellow;
+            border: 0;
+            border-radius: 7px;
+            cursor: pointer;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <button>Click Here</button>
+    <p></p>
+
+    <script>
+        let btn = document.querySelector('button');
+        let body = document.querySelector('body');
+
+        function randomColor() {
+            let red = Math.floor(Math.random() * 255);
+            let green = Math.floor(Math.random() * 255);
+            let blue = Math.floor(Math.random() * 255);
+
+            let color = `rgb(${red}, ${green}, ${blue})`;
+            document.querySelector('p').textContent = rgbToHex(color);
+            return color
+        }
+
+        btn.addEventListener('click', function () {
+            body.style.backgroundColor = randomColor();
+        });
+
+        function rgbToHex(rgb) {
+            const [r, g, b] = rgb.match(/\d+/g);
+            const redHex = parseInt(r).toString(16).padStart(2, '0');
+            const greenHex = parseInt(g).toString(16).padStart(2, '0');
+            const blueHex = parseInt(b).toString(16).padStart(2, '0');
+            const hexColor = `#${redHex}${greenHex}${blueHex}`;
+
+            return hexColor;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+    background: linear-gradient(135deg, #153677, #4E085F);
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    padding: 10px;
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 540px;
+    background: #FFFFFFFF;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+}
+
+.todo-app h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo-app h2 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #EDEEF0;
+    border-radius: 40px;
+    padding-left: 20PX;
+    margin-bottom: 25px;
+}
+
+form {
+    width: 100%;
+    display: flex;
+}
+
+input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+}
+
+button {
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #FF5945;
+    color: #FFFFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    transition: 0.1s;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    cursor: pointer;
+    position: relative;
+}
+
+ul li::before {
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url("assets/unchecked.png");
+    background-size: cover;
+    background-position: center;
+    top: 10px;
+    left: 8px;
+}
+
+ul li.checked {
+    color: #555555;
+    text-decoration: line-through;
+}
+
+ul li.checked::before {
+    background-image: url("assets/checked.png");
+}
+
+ul li span {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.1s;
+}
+
+ul li span:hover {
+    background: #edeef0;
+}
+
+ul li span:active {
+    transform: scale(0.98);
+}
+
+.error::placeholder {
+    color: #ff5945;
+}
+
+@media (max-width: 480px) {
+
+    input {
+        width: 0;
+    }
+
+    button {
+        padding: 10px 30px;
+    }
+
+    .todo-app {
+        margin: 30px auto 20px;
+    }
+}

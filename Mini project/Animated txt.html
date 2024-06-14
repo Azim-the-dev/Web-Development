@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        html {
+            background: #181818;
+            color: white;
+        }
+
+        .main-div {
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            padding-top: 30px;
+        }
+
+        input {
+            border: none;
+            outline: none;
+            height: 30px;
+            width: 100%;
+            background-color: #313131;
+            color: white;
+            padding: 4px;
+            border: 2px solid #5857575e;
+
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+            border-right: transparent;
+        }
+
+        button {
+            border: none;
+            outline: none;
+            height: 41.2px;
+            padding: 4px;
+            padding-right: 10px;
+            background-color: #313131;
+            color: white;
+            border: 2px solid #5857575e;
+
+            border-left: transparent;
+        }
+
+        .txt-div {
+            padding: 20px;
+        }
+
+        p {
+            text-align: center;
+            word-wrap: break-word;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        @media (min-width:700px) {
+            body {
+                padding-left: 20%;
+                padding-right: 20%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-div">
+        <input type="text">
+        <button>ENTER</button>
+    </div>
+    <div class="txt-div">
+        <p></p>
+    </div>
+    <script>
+        const input = document.querySelector('input');
+        const button = document.querySelector('button');
+        const p = document.querySelector('p');
+        const demo = `Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolores obcaecati nisi, quas dignissimos in praesentium consequatur ea ex eligendi delectus eius tempore fugiat, sit, eos necessitatibus et atque impedit provident.
+        Dolor eum nisi doloribus, animi dolorum consequuntur laudantium deserunt perspiciatis, dolorem molestias quas quibusdam! Dolore tempore id, impedit sit exercitationem odit accusamus aut. Aliquam, totam. Quos quia qui fuga ducimus?
+        Ab quas optio illum nesciunt in ipsam magnam nisi ad, cupiditate rem, officiis debitis. Atque facilis incidunt eos ducimus veniam? Incidunt consequuntur repellendus delectus vel dolor nemo, tenetur minima saepe!
+        Nesciunt modi ipsam nam qui nisi officia dolorem repellendus necessitatibus quas exercitationem? Explicabo maiores ipsa quaerat deleniti, porro ipsum rem voluptate officiis natus suscipit. Porro facere dignissimos culpa esse et?
+        Perferendis recusandae sint libero. Corrupti nemo asperiores laborum odit. Ipsum saepe, eos voluptas itaque libero adipisci iste doloremque exercitationem neque reiciendis pariatur at iusto aliquam magni dicta tempora, eum necessitatibus.
+        Delectus, eveniet reprehenderit quod ad eos quas. Aut ex ab suscipit corrupti odit debitis laudantium aliquid nam minima id corporis, hic, culpa repellendus excepturi veniam modi! Et nostrum cupiditate consequuntur.
+        Iste quidem libero, assumenda nisi distinctio veniam nobis neque? Explicabo totam ex sit ipsam ad incidunt magni veniam vero alias atque fugiat pariatur, cumque nesciunt. Mollitia, enim quas. Ratione, et.
+        In necessitatibus praesentium ducimus quia, laudantium facere beatae saepe. Aliquid porro, impedit laboriosam exercitationem facilis sequi repellendus iste at dolores. Debitis eligendi aliquid natus sunt quia illum ipsa ipsum voluptatum.
+        Eligendi eius, neque error aperiam nesciunt, delectus molestiae placeat expedita ab quaerat rerum dolorum quasi maxime recusandae inventore ea illo odit tempora iusto consequatur dolores saepe. Itaque corporis culpa quas?
+        Optio, architecto minima! Eius omnis assumenda impedit, quia veritatis molestiae alias illum quisquam magni quibusdam autem cupiditate repellendus corporis cumque delectus modi animi. Culpa reprehenderit esse obcaecati eos adipisci architecto?
+        Unde tenetur dolores tempora consectetur incidunt alias non officiis voluptates quia! Non reprehenderit qui doloremque. Dicta sed eligendi ipsum! Corporis, fugit repellat laboriosam repudiandae pariatur magnam corrupti. Similique, nihil magni.
+        Doloremque et non officia assumenda? Doloremque dolores blanditiis necessitatibus ipsam. Incidunt illo accusantium provident id nulla eveniet nostrum distinctio quae saepe laborum maiores, soluta inventore cumque fugit ipsa beatae sunt.`;
+
+        button.addEventListener('click', () => {
+            if (input.value.toUpperCase() == "DEMO") {
+                main(demo);
+            } else {
+                main(input.value);
+            }
+        });
+
+        input.addEventListener('keydown', function (event) {
+            if (event.key == "Enter") {
+                if (input.value.toUpperCase() == "DEMO") {
+                    main(demo);
+                } else {
+                    main(input.value);
+                }
+            }
+        });
+
+        function main(str) {
+            input.value = '';
+            p.innerHTML = '';
+            let arr = str.split('');
+            let index = -1;
+
+            const stop = setInterval(() => {
+                index = index + 1;
+                if (index == arr.length) {
+                    clearInterval(stop);
+                } else {
+                    print(index);
+                }
+            }, 100);
+
+            function print(i) {
+                p.append(arr[i].toUpperCase());
+            }
+        }
+    </script>
+</body>
+
+</html>

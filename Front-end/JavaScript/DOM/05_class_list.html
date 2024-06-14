@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .color {
+            color: yellow;
+        }
+
+        .bgcolor {
+            background-color: chocolate;
+        }
+
+        .align {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="color azim">Hello World</h1>
+
+    <script>
+        let h1 = document.querySelector('h1');
+
+        console.log(h1.classList); // return class list
+        h1.classList.add('bgcolor', 'align');
+        if (h1.classList.contains('color') == true) {  // Return true if class exits
+            h1.classList.remove('color');
+        }
+
+        h1.classList.toggle('azim');
+        // if azim exits then it remove azim and retuen false
+        // Elseif it add new class azim and return true
+    </script>
+</body>
+
+</html>

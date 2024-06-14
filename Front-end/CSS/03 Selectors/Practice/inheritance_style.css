@@ -1,0 +1,18 @@
+div {
+    background-color: yellow;
+}
+
+form:hover {
+    background-color: aqua;
+}
+
+/* By deafult some tags tags does not inheritance. Like input,button etc... */
+/* Some elements are non-inheritable. Like width,higth,border etc... */
+
+input {
+    background-color: inherit;
+}
+
+button {
+    background-color: inherit;
+}

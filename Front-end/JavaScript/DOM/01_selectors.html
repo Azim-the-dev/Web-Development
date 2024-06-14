@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            background-color: gray;
+        }
+
+        #div_id h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div_id">
+        <h1>SK AZIM</h1>
+    </div>
+
+    <div class="div_class"></div>
+
+    <script>
+        let div_id = document.getElementById('div_id');
+        let div_class = document.getElementsByClassName('div_class');
+        let tag_nm = document.getElementsByTagName('h1');
+
+        // Query Selectors
+        let query1 = document.querySelector('p'); //Selects first p element
+        let query2 = document.querySelector('#div_id'); // Selects first element with id = div_id
+        let query3 = document.querySelector('.div_class'); // Selects first element with class = div_class
+
+        let query4 = document.querySelectorAll('p'); // Selects all p elements
+    </script>
+</body>
+
+</html>

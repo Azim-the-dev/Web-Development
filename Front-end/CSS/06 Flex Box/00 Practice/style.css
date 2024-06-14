@@ -1,0 +1,63 @@
+#Box {
+    width: 400px;
+    height: 400px;
+    border: 3px solid lightseagreen;
+    border-radius: 12px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    /* align-content: space-evenly; */
+    align-items: center;
+}
+
+#Box div {
+    width: 100px;
+    height: 100px;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: gray;
+    font-size: 50px;
+    text-align: center;
+}
+
+#Nav_Bar {
+    margin-top: 50px;
+    width: 900px;
+    height: 50px;
+    background-color: lightslategrey;
+    border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+}
+
+#Nav_Bar div {
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    margin-left: 5px;
+    font-size: 24px;
+    line-height: 45px;
+}
+
+#Container {
+    width: 80%;
+    height: 800px;
+    border: 2px solid black;
+    border-radius: 2px;
+    margin-top: 5px;
+    display: flex;
+    flex-wrap: wrap;
+} 
+
+#Container .item {
+    width: 200px;
+    height: 200px;
+    /* border: 2px solid black; */
+    border-radius: 2px;
+    background-color: orange;
+    margin: 5px;
+    flex-grow: 1;
+    flex-basis: 200;
+}

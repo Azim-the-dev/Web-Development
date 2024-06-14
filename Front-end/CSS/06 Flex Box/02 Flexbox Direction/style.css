@@ -1,0 +1,98 @@
+h1 {
+    text-align: center;
+}
+
+/* -------------------------------- */
+
+#container_1 {
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    flex-direction: row;
+}
+
+#container_1 div {
+    height: 100px;
+    width: 300px;
+    color: wheat;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_2 {
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    flex-direction: row-reverse;
+}
+
+#container_2 div {
+    height: 100px;
+    width: 300px;
+    color: wheat;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_3 {
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    flex-direction: column;
+}
+
+#container_3 div {
+    height: 100px;
+    width: 300px;
+    color: wheat;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+#container_4 {
+    height: 300px;
+    width: 80%;
+    background-color: azure;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+
+    flex-direction: column-reverse;
+}
+
+#container_4 div {
+    height: 100px;
+    width: 300px;
+    color: wheat;
+    text-align: center;
+    font-size: 25px;
+}
+
+/* -------------------------------- */
+
+/* Flexbox Direction
+ * --> It setd how flex items are placed in the flex cpntainer, along whic axis amd direction
+ *
+ * -> flex-direction: row;            // main axis, left to right
+ * -> flex-direction: row-reverse;    // main axis, right right left
+ * -> flex-direction: column;         // main axis, top to botton
+ * -> flex-direction: column-reverse; // main axis, botton to top
+ */

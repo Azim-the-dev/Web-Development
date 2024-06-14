@@ -1,0 +1,83 @@
+body {
+    background-color: wheat;
+}
+
+* {
+    font-family: 'Segoe UI';
+}
+
+h1,
+h3 {
+    color: goldenrod;
+}
+
+#Adam {
+    color: brown;
+    /* I like this Selector  */
+}
+
+.upvote {
+    background-color: green;
+    color: white;
+}
+
+.post a {
+    color: purple;
+    background-color: yellow;
+}
+
+/* Same lable / Sibling Clild */
+p+h3 {
+    text-decoration: underline;
+}
+
+.upvote+button {
+    background-color: rgb(255, 96, 96);
+    color: black;
+}
+
+div>input {
+    background-color: gray;
+    color: black;
+}
+
+input[type="text"] {
+    color: red;
+}
+
+input[type="password"] {
+    color: green;
+}
+
+input[type] {
+    background-color: ghostwhite;
+}
+
+button:hover {
+    color: ghostwhite;
+    background-color: black;
+}
+
+button:active {
+    background-color: blue;
+}
+
+input[type="radio"]:checked+label {
+    color: red;
+}
+
+footer div:nth-of-type(2n) {
+    background-color: green;
+}
+
+h1::first-letter {
+    color: green;
+}
+
+#Quora::first-line {
+    color: red;
+}
+
+#Quora::selection {
+    color: yellowgreen;
+}

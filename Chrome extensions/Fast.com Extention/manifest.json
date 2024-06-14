@@ -1,0 +1,28 @@
+{
+    "name": "Mbps To MBps",
+    "version": "1.0",
+    "description": "This extension for fast.com converts the speed from Kbps to KBps, Mbps to MBps and Gbps to GBps.",
+    "manifest_version": 3,
+    "action": {
+        "default_icon": "assets/logo.png"
+    },
+    "icons": {
+        "128": "assets/logo.png"
+    },
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://*.fast.com/*"
+            ],
+            "js": [
+                "app.js"
+            ],
+            "css": [
+                "style.css"
+            ]
+        }
+    ]
+}

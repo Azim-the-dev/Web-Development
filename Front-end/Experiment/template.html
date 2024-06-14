@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #252526;
+        }
+
+        .cantainer {
+            height: 40px;
+            background-color: #e0ff7a;
+        }
+
+        .azim {
+            color: white;
+            text-align: center;
+            background-color: yellowgreen;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <template id="template">
+        <div class="cantainer">
+            <h1 class="azim">SK AZIM</h1>
+        </div>
+    </template>
+
+    <script>
+        const template = document.getElementById('template');
+        for (let i = 0; i < 3; i++) {
+            const colne = template.content.cloneNode(true);
+            document.body.appendChild(colne);
+        }
+    </script>
+</body>
+
+</html>

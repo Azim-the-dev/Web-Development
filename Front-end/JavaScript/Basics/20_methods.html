@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const cal0 = {
+            num: 55,
+
+            add: function (a, b) {
+                return a + b;
+            },
+
+            sub: function (a, b) {
+                return a - b;
+            },
+
+            mul: function (a, b) {
+                return a * b;
+            }
+        }
+
+        // Methods Shorthand
+        const cal = {
+            num: 55,
+
+            add(a, b) {
+                return a + b;
+            },
+
+            sub(a, b) {
+                return a - b;
+            },
+
+            mul(a, b) {
+                return a * b;
+            }
+        }
+
+        console.log(cal.add(2, 2));
+    </script>
+</body>
+
+</html>

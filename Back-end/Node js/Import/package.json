@@ -1,0 +1,12 @@
+{
+  "name": "import",
+  "version": "1.0.0",
+  "description": "import test",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sk Azim",
+  "license": "ISC",
+  "type": "module"
+}

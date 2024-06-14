@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const student = {
+            name: "Azim",
+            age: 20,
+            DOB: "15/02/2004",
+            subject: ["HTML", "CSS", "JS"]
+        };
+
+        let n = "name";
+
+        console.log(student["name"]);
+        console.log(student[n]);
+        console.log(student.name);
+
+        // Add/Update Value
+        student.subject = "IDK"; // Update
+        student.marks = [81, 90, 100]; // Add & Assigned
+        delete student.DOB; // Delete
+
+        console.log(student)
+    </script>
+</body>
+
+</html>

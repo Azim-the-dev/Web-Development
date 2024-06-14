@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjg_8GrQL1mM6XS1uk2rPzFUoC1T_zMGk"></script>
+    <style>
+        /* Set the size of the map */
+        #map {
+            height: 500px;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>My Google Map</h3>
+    <div id="map"></div>
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of the coordinates
+            const location = { lat: 20.276472, lng: 85.8620411 };
+            // The map, centered at the coordinates
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 8,
+                center: location,
+            });
+            // The marker, positioned at the coordinates
+            const marker = new google.maps.Marker({
+                position: location,
+                map: map,
+            });
+        }
+
+        // Load the map when the page has finished loading
+        window.onload = initMap;
+    </script>
+</body>
+
+</html>
+
+
+<!-- GOOGLE MAP API KEY: AIzaSyCjg_8GrQL1mM6XS1uk2rPzFUoC1T_zMGk -->

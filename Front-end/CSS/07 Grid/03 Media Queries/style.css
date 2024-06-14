@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    color: white;
+    background-color: orange;
+    border-radius: 15px;
+}
+
+/* It mense only at 400px */
+@media (width: 400px) {
+    h1 {
+        background-color: blue;
+    }
+}
+
+/* It meanse min-width 400px or more */
+@media (min-width:400px) {
+    h1 {
+        background-color: red;
+    }
+}
+
+/* It meanse max-width 400px or more */
+@media (max-width:400px) {
+    h1 {
+        background-color: green;
+    }
+}
+
+/* It meanse: Range(between 300px to 500px) */
+@media (min-width:300px) and (max-width:500px) {
+    h1 {
+        color: black;
+    }
+}
+
+/* It mense when screen is in landscapemode */
+@media (orientation:landscape) {
+    h1 {
+        color: gold;
+    }
+}

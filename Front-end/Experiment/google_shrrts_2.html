@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let name = "John Doe"; // Replace with the desired name value
+        let email = "john.doe@example.com"; // Replace with the desired email value
+
+        function submitData(name, email) {
+            const params = new URLSearchParams();
+            params.append('Name', name);
+            params.append('Email', email);
+
+            fetch('https://script.google.com/macros/s/AKfycbzu6L8nvNhAIMAwSMQqzNqOGLTZFkxz35vGJRm03OyHsrQlMcfDeSZF_JnWZul1mnuPgg/exec', {
+                method: 'POST',
+                body: params
+            })
+                .then(response => {
+                    if (response.ok) {
+                        console.log('Data submitted successfully');
+                    } else {
+                        console.error('Error submitting data');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error submitting data:', error);
+                });
+        }
+
+        // Call the function with the variables
+        submitData(name, email);
+    </script>
+</body>
+
+</html>
+
+<!-- github link: https://github.com/levinunnink/html-form-to-google-sheet?tab=readme-ov-file -->

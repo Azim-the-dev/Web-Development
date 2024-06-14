@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <script>
+        let url = "http://universities.hipolabs.com/search?name=";
+        let contry = "india";
+
+        async function azim() {
+            try {
+                let res = await axios.get(url + contry);
+                // console.log(res.data);
+                print(res.data);
+            } catch (err) {
+                console.log("ERROR >> ", err);
+            }
+        }
+
+        function print(collage) {
+            for(col of collage){
+                console.log(col.name);
+            }
+        }
+
+        azim();
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1 {
+            height: 60vh;
+            background-color: yellowgreen;
+        }
+
+        #div2 {
+            height: 100px;
+            background-color: aqua;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1">
+        <div id="div2">TOP</div>
+    </div>
+
+    <script>
+        let div1 = document.querySelector('#div1');
+        let div2 = document.querySelector('#div2');
+
+        div1.addEventListener('click', function () {
+            console.log("Div1 is clicked.");
+        });
+
+        div2.addEventListener('click', function (event) {
+            event.stopPropagation(); // IMP
+            console.log("Div2 is clicked.");
+        });
+    </script>
+</body>
+
+</html>

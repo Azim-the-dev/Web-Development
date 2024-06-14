@@ -1,0 +1,2180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#cdb842">
+    <title>JS Notes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="assets/prism.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="manifest" href="manifest.json">
+</head>
+
+<body>
+    <div class="main">
+        <h1>JAVASCRIPT NOTES</h1>
+        <div id="toggle-button">
+            <label class="hamburger">
+                <input id="checkbox" type="checkbox" onclick="toggleSidebar()">
+                <svg viewBox="0 0 32 32">
+                    <path class="line line-top-bottom"
+                        d="M27 10 13 10C10.8 10 9 8.2 9 6 9 3.5 10.8 2 13 2 15.2 2 17 3.8 17 6L17 26C17 28.2 18.8 30 21 30 23.2 30 25 28.2 25 26 25 23.8 23.2 22 21 22L7 22">
+                    </path>
+                    <path class="line" d="M7 16 27 16"></path>
+                </svg>
+            </label>
+        </div>
+    </div>
+
+    <div id="sidebar">
+        <ul id="Coll">
+            <li><a onclick="scrollToSection('variables'); toggleSidebar(); checkboxUncheck(); checkboxUncheck();">What
+                    is a Variable</a></li>
+            <li><a onclick="scrollToSection('datatypes'); toggleSidebar(); checkboxUncheck();">Data Types in JS</a></li>
+            <li><a onclick="scrollToSection('Operators'); toggleSidebar(); checkboxUncheck();">Operators</a></li>
+            <li><a onclick="scrollToSection('Operator-Precendence'); toggleSidebar(); checkboxUncheck();">Operator
+                    Precendence</a></li>
+            <li><a onclick="scrollToSection('Template-Literals'); toggleSidebar(); checkboxUncheck();">Template
+                    Literals</a></li>
+            <hr style="opacity: 0.2; margin: 0 70px 11px 70px;">
+            <li><a onclick="scrollToSection('IF-Else'); toggleSidebar(); checkboxUncheck();">IF-Else</a></li>
+            <li><a onclick="scrollToSection('Switch-Statement'); toggleSidebar(); checkboxUncheck();">Switch
+                    Statement</a></li>
+            <li><a onclick="scrollToSection('truthy-falsy'); toggleSidebar(); checkboxUncheck();">Truthy & falsy</a>
+            </li>
+            <li><a onclick="scrollToSection('String-Methods'); toggleSidebar(); checkboxUncheck();">String Methods</a>
+            </li>
+            <li><a onclick="scrollToSection('Array')">Array</a></li>
+            <li><a onclick="scrollToSection('Array-Methods'); toggleSidebar(); checkboxUncheck();">Array Methods</a>
+            </li>
+            <li><a onclick="scrollToSection('Array-References'); toggleSidebar(); checkboxUncheck();">Array
+                    References</a></li>
+            <li><a onclick="scrollToSection('Constant-Arrays'); toggleSidebar(); checkboxUncheck();">Constant Arrays</a>
+            </li>
+            <li><a onclick="scrollToSection('Nested-Arrays'); toggleSidebar(); checkboxUncheck();">Nested Arrays</a>
+            </li>
+            <li><a onclick="scrollToSection('Loops'); toggleSidebar(); checkboxUncheck();">Loops</a></li>
+            <hr style="opacity: 0.2; margin: 0 70px 11px 70px;">
+            <li><a onclick="scrollToSection('Objects-Literals'); toggleSidebar(); checkboxUncheck();">Objects
+                    Literals</a></li>
+            <li><a onclick="scrollToSection('Obiect-of-Objects'); toggleSidebar(); checkboxUncheck();">Obiect of
+                    Objects</a></li>
+            <li><a onclick="scrollToSection('Array-of-Objects'); toggleSidebar(); checkboxUncheck();">Array of
+                    Objects</a></li>
+            <li><a onclick="scrollToSection('Math-Object'); toggleSidebar(); checkboxUncheck();">Math Object</a></li>
+            <li><a onclick="scrollToSection('Random-Number'); toggleSidebar(); checkboxUncheck();">Random Number</a>
+            </li>
+            <li><a onclick="scrollToSection('Functions'); toggleSidebar(); checkboxUncheck();">Functions</a></li>
+            <li><a onclick="scrollToSection('Function-Expressions'); toggleSidebar(); checkboxUncheck();">Function
+                    Expressions</a></li>
+            <li><a onclick="scrollToSection('Methods'); toggleSidebar(); checkboxUncheck();">Methods</a></li>
+            <hr style="opacity: 0.2; margin: 0 70px 11px 70px;">
+            <li><a onclick="scrollToSection('This-Keyword'); toggleSidebar(); checkboxUncheck();">This Keyword</a></li>
+            <li><a onclick="scrollToSection('try-catch'); toggleSidebar(); checkboxUncheck();">Try & catch</a></li>
+            <li><a onclick="scrollToSection('Arrow-Functons'); toggleSidebar(); checkboxUncheck();">Arrow Functons</a>
+            </li>
+            <li><a onclick="scrollToSection('Set-Timeout'); toggleSidebar(); checkboxUncheck();">Set Timeout</a></li>
+            <li><a onclick="scrollToSection('Set-Interval'); toggleSidebar(); checkboxUncheck();">Set Interval</a></li>
+            <li><a onclick="scrollToSection('More'); toggleSidebar(); checkboxUncheck();">More</a></li>
+            <hr style="opacity: 0.2; margin: 0 70px 11px 70px;">
+            <li><a onclick="scrollToSection('DOM'); toggleSidebar(); checkboxUncheck();">DOM</a></li>
+            <li><a onclick="scrollToSection('Selecting-Elements'); toggleSidebar(); checkboxUncheck();">Selecting
+                    Elements</a></li>
+            <li><a onclick="scrollToSection('Using-Properties'); toggleSidebar(); checkboxUncheck();">Using
+                    Properties</a></li>
+            <li><a onclick="scrollToSection('Manipulating-Attributes'); toggleSidebar(); checkboxUncheck();">Manipulating
+                    Attributes</a>
+            </li>
+            <li><a onclick="scrollToSection('Manipulating-Style'); toggleSidebar(); checkboxUncheck();">Manipulating
+                    Style</a></li>
+            <li><a onclick="scrollToSection('Navigation'); toggleSidebar(); checkboxUncheck();">Navigation</a></li>
+            <li><a onclick="scrollToSection('Adding-Elements'); toggleSidebar(); checkboxUncheck();">Adding Elements</a>
+            </li>
+            <li><a onclick="scrollToSection('DOM-Events'); toggleSidebar(); checkboxUncheck();">DOM Events</a></li>
+            <li><a onclick="scrollToSection('Keyboard-Events'); toggleSidebar(); checkboxUncheck();">Keyboard Events</a>
+            </li>
+            <li><a onclick="scrollToSection('Form-Events'); toggleSidebar(); checkboxUncheck();">Form Events</a></li>
+            <li><a onclick="scrollToSection('More-Events'); toggleSidebar(); checkboxUncheck();">More Events</a></li>
+            <li><a onclick="scrollToSection('Event_Bubbling'); toggleSidebar(); checkboxUncheck();">Event Bubbling</a>
+            </li>
+            <hr style="opacity: 0.2; margin: 0 70px 11px 70px;">
+            <li><a onclick="scrollToSection('Call-Stack'); toggleSidebar(); checkboxUncheck();">Call Stack</a></li>
+            <li><a onclick="scrollToSection('Single-Threaded'); toggleSidebar(); checkboxUncheck();">Single-Threaded</a>
+            </li>
+            <li><a onclick="scrollToSection('Callback-Hell'); toggleSidebar(); checkboxUncheck();">Callback Hell
+                    Example</a>
+            </li>
+            <li><a onclick="scrollToSection('Promises'); toggleSidebar(); checkboxUncheck();">Promises</a></li>
+            <li><a onclick="scrollToSection('Promises-Example'); toggleSidebar(); checkboxUncheck();">Promises
+                    Example</a>
+            </li>
+            <li><a onclick="scrollToSection('Async-Functions'); toggleSidebar(); checkboxUncheck();">Async Functions</a>
+            </li>
+            <li><a onclick="scrollToSection('Async-Functions-Example'); toggleSidebar(); checkboxUncheck();">Async
+                    Functions Example</a></li>
+            <li><a onclick="scrollToSection('API'); toggleSidebar(); checkboxUncheck();">API</a></li>
+            <li><a onclick="scrollToSection('OOPs'); toggleSidebar(); checkboxUncheck();">OOPs</a></li>
+            <li><a onclick="scrollToSection('END'); toggleSidebar(); checkboxUncheck();">END</a></li>
+        </ul>
+    </div>
+
+    <div class="image"><img src="assets/JS.jpg" alt="JS"></div>
+
+    <h3 id="variables">What is a Variable</h3>
+    <hr>
+
+    <p>A variable is simply the name of a storage location.</p>
+    <pre class="note">Note: REPL is Read-Evaluate-Print-Loop</pre>
+
+    <h3 id="datatypes">Data Types in JS</h3>
+    <hr>
+    <p>Primitive Types</p>
+    <ol>
+        <li>Numbers<ul class="ula">
+                <li><small>Example: 15, -25, 12.7</small></li>
+            </ul>
+        </li>
+        <li>Boolean<ul class="ula">
+                <li><small>Example: true or false</small></li>
+            </ul>
+        </li>
+        <li>String<ul class="ula">
+                <li><small>Example: Azim, 99 1@#$_00</small></li>
+            </ul>
+        </li>
+        <li>Undefined<ul class="ula">
+                <li><small>A variable that has not been assigned a value is of
+                        type undefined.</small></li>
+            </ul>
+        </li>
+        <li>Null<ul class="ula">
+                <li><small>The null value represents the intentional absence of
+                        any object value.</small></li>
+            </ul>
+        </li>
+        <li>Bigint<ul class="ula">
+                <li><small>Example: null</small></li>
+            </ul>
+        </li>
+        <li>Symbol<ul class="ula">
+                <li><small>Example: null</small></li>
+            </ul>
+        </li>
+        <li>Object<ul class="ula">
+                <li><small>Example: null</small></li>
+            </ul>
+        </li>
+    </ol>
+
+    <pre class="note">Note: <b>typeof</b> is ushed to know type of a veriable</pre>
+
+    <pre class="note">Note: power operator > 2**3 = 8</pre>
+
+    <pre class="note">The NaN global property is a value representing Not-A-Number.</pre>
+
+    <h3 id="Operators">Operators</h3>
+    <hr>
+
+    <ol>
+        <li><small>Arithmetic</small></li>
+        <li><small>Unary</small></li>
+        <li><small>Assignment</small></li>
+        <li><small>Comparison</small></li>
+        <li><small>Logical</small></li>
+    </ol>
+
+    <pre class="note">== compares value, not type</pre>
+    <pre class="note">=== compares type & value</pre>
+
+    <pre>
+        <code class="language-javascript">
+            // "123" == 123
+            // >> true
+
+            // "123" === 123
+            // >> false
+        </code>
+    </pre>
+
+    <h3 id="Operator-Precendence">Operator Precendence</h3>
+    <hr>
+
+    <p>This is the general order of solving an expression.</p>
+
+    <div class="bac">
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(
+            )</p>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**
+        </p>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*,
+            /, %</p>
+
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;+,
+            -</p>
+
+    </div>
+
+    <h3>First Program</h3>
+    <hr>
+
+    <pre>
+        <code class="language-javascript">
+            console.log("Hello, world!")
+        </code>
+    </pre>
+
+    <h3 id="Template-Literals">Template Literals</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            console.log(`Your total price is: ${a+b} rupees`) // This is Template Literals.
+            // They are used to add embedded expressions in a string
+        </code>
+    </pre>
+
+    <h3 id="IF-Else">IF-Else</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            // if else
+            if (age > 18) {
+                console.log("You can vote");
+            }
+            else {
+                console.log("You can not vote");
+            }
+    
+            // else if
+            let name = "Azim";
+            if (name == "axim") {
+                console.log(`Your name is ${name}`);
+            }
+            else if (name == "aziz"){
+                console.log(`Your name is ${name}`);
+            }
+            else {
+                console.log(`Your name is ${name}`);
+            }
+        </code>
+    </pre>
+
+    <h3 id="Switch-Statement">Switch Statement</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            let color = "green";
+
+            switch (color) {
+                case "white":
+                    console.log("Yhe color is white");
+                case "black":
+                    console.log("Yhe color is black");
+                case "green":
+                    console.log("Yhe color is green");
+                default:
+                    console.log("IDK");
+            }
+        </code>
+    </pre>
+
+    <h3 id="truthy-falsy">truthy & falsy</h3>
+    <hr>
+
+    <p>> Everything in JS is true or false (in boolean context).</p>
+    <p>> This doesn't mean their value itself is false or true, but they are treated as false or true if taken
+        in
+        boolean context.</p>
+    <br>
+    <p><b>Falsy values:</b></p>
+    <p>false, 0, -0, On (Biglnt value), (empty string), null, undefined, NaN</p>
+    <br>
+    <p><b>Truthy values:</b></p>
+    <p>Everything else</p>
+
+    <h3 id="String-Methods">String Methods</h3>
+    <hr>
+
+    <pre class="note">String are Immutable in JS (But complete value can be changed)</pre>
+
+    <p><b>str.trim( )</b></p>
+    <p>> Trims whitespaces from both ends of string & returns a new one.</p>
+    <br>
+    <p><b>str.indexOf("Look")</b></p>
+    <p>Returns the first index of occurrence of some value in string. Or gives -1 if not found.</p>
+    <br>
+    <p><b>str.toUpperCase( )</b></p>
+    <p><b>str.toLowerCase( )</b></p>
+    <br>
+
+    <p><b>str.slice(3)</b></p>
+    <pre>
+        <code class="language-javascript">
+            let str = "Sk Azim";
+            console.log(str); // Sk Azim
+            let str2 = str.slice(3);
+            console.log(str2); // Azim
+            let str3 = str.slice(0, 2);
+            console.log(str3); // Sk
+            let str4 = str.slice(-4); // str.slice(length-num);
+            console.log(str4); // Azim
+        </code>
+    </pre>
+
+    <p><b>str.replace("A", "Z");</b></p>
+    <pre>
+        <code class="language-javascript">
+            let str = "Sk Azim Sk";
+            console.log(str); // Sk Azim
+
+            let str2 = str.replace("Sk", "Shaikh")
+            console.log(str2); // Shaikh Azim Sk
+        </code>
+    </pre>
+
+    <p><b>str.repeat(5)</b></p>
+    <pre>
+        <code class="language-javascript">
+            let str = "Azim";
+            let str2 = str.repeat(5);
+            console.log(str2); // AzimAzimAzimAzimAzim
+        </code>
+    </pre>
+
+    <h3 id="Array">Array</h3>
+    <hr>
+    <pre class="note">Arrays are Mutable in JS</pre>
+    <pre>
+        <code class="language-javascript">
+            let names = ["Azim", "Aziz", "Alam", "Aryan"];
+            console.log(names);
+            console.log(names.length);
+            console.log(names[0][0]); // 'A'
+    
+            let info = ["Azim", 20, 20.1]; // Mixed Array
+            console.log(info);
+        </code>
+    </pre>
+
+    <h3 id="Array-Methods">Array Methods</h3>
+    <hr>
+
+    <p><b><span style="color: #66d9ef;">arr.push("Azim")</span></b> // Add to end</p>
+    <p><b><span style="color: #66d9ef;">arr.pop( )</span></b> // delete From end & returns it</p>
+    <p><b><span style="color: #66d9ef;">arr.unshift("Azim")</span></b> // Add to start</p>
+    <p><b><span style="color: #66d9ef;">arr.shift( )</span></b> // Delete from start & returns it</p>
+    <p><b><span style="color: #66d9ef;">arr.indexOf("Azim")</span></b> // Returns index of something</p>
+    <p><b><span style="color: #66d9ef;">arr.includes("Azim")</span></b> // Search for a value and return true or
+        false
+    </p>
+    <p><b><span style="color: #66d9ef;">arr1.concat(arr2)</span></b> // Merge 2 arrays</p>
+    <p><b><span style="color: #66d9ef;">arr.reverse( )</span></b> // Reverse an array</p>
+    <br>
+
+    <p><b><span style="color: #66d9ef;">arr.slice( )</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            // It does not modify the original array.
+            let arr = ["Azim", "Aziz", "Aryan"];
+
+            arr2 = arr.slice(); // ['Azim', 'Aziz', 'Aryan']
+            arr2 = arr.slice(1); // ['Aziz', 'Aryan']
+            arr2 = arr.slice(1, 2); // ['Aziz']
+            arr2 = arr.slice(-1); // ['Aryan']
+        </code>
+    </pre>
+    <br>
+
+    <p><b><span style="color: #66d9ef;">arr.splice( )</span> // removes I replaces I add elements in place</b>
+    </p>
+    <p>splice(start, deleteCount, item0...itemN)</p>
+    <pre>
+        <code class="language-javascript">
+            // It modifies the original array.
+            let arr = ["Azim", "Aziz", "Aryan", "Alam"];
+
+            arr2 = arr.splice(3);
+            // > arr: ['Azim', 'Aziz', 'Aryan']
+            // > arr2: ['Alam']
+
+            arr2 = arr.splice(0, 1);
+            // > arr: ['Aziz', 'Aryan']
+            // > arr2: ['Azim']
+
+            arr2 = arr.splice(0, 0, "Azim", "Alam")
+            // > arr: ['Azim', 'Alam', 'Aziz', 'Aryan']
+            // > arr2: [ ]
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">arr.sort()</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            let days = ["monday", "sunday", "wednesday", "tuesday"];
+            days.sort();
+            // >> ['monday', 'sunday', 'tuesday', 'wednesday']
+    
+            let num = [25, 16, 4, 49, 36, 9];
+            num.sort();
+            // >> [16, 25, 36, 4, 49, 9]
+            // This method won't work with numbers.
+            // Because internally, it converts numbers to strings.
+        </code>
+    </pre>
+
+    <p><b><span style="color: #2bdcff;">More Array Methods: </span></b></p>
+
+    <p><b><span style="color: #66d9ef;">forEach</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+            arr.forEach((el) => {
+                console.log(el); // Print all indivusally
+            });
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">map</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+            
+            // map
+            let newArr = arr.map((el) => {
+                return el * 2;
+            });
+            console.log(newArr); // >> [2, 4, 6, 8, 10, 12, 14, 16, 18, 0]
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">filter</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            let arr = [1, 1, 2, 2];
+            let newArr = arr.filter((el) => {
+                return el == 2;
+                // if return true then that element stored in new arr else not.
+            });
+            console.log(newArr); // >> [ 2, 2 ]
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">every</span></b></p>
+    <p>>> Returns true if every element of array gives true for some function. Else returns false.</p>
+    <pre>
+        <code class="language-javascript">
+            let arr = [2, 2, 2, 2];
+            let bool = arr.every((el) => {
+                return el % 2 == 0;
+                // if every time return true then `bool = true` else false
+            });
+            console.log(bool); // >> true
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">some</span></b></p>
+    <p>Returns true if some elements of array give true for some function. Else returns false.</p>
+    <pre>
+        <code class="language-javascript">
+            // Opposite of every method.
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">reduce</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
+
+            let newArr = arr.reduce((res, el) => {
+                return res + el;
+            });
+            console.log(newArr); // >> 45
+        </code>
+    </pre>
+
+
+    <h3 id="Array-References">Array References</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            let arr1 = [1];
+            let arr2 = [1];
+            
+            console.log(arr1 == arr2);
+            console.log(arr1 === arr2);
+            // Both are false due to different memory locations.
+    
+            let arr3 = arr1;
+            console.log(arr3 == arr1);
+            console.log(arr3 === arr1);
+            // Both are true because they reference the same memory location.
+    
+            // Since the memory locations are the same, if I change arr3 it will affect arr1.
+            arr3.push(2);
+            console.log(arr3, arr1); // > Boath are [1, 2]
+        </code>
+    </pre>
+
+    <h3 id="Constant-Arrays">Constant Arrays</h3>
+    <hr>
+    <p><b>const arr = [1, 2, 3, 4]</b></p>
+    <p>const arr in JavaScript means that the variable arr is set to always hold the same array, even though the
+        contents of the array can still be changed.</p>
+
+    <h3 id="Nested-Arrays">Nested Arrays</h3>
+    <hr>
+    <p>Nested Arrays is basiclly 2D array or array of arra.</p>
+    <pre>
+        <code class="language-javascript">
+            let nums = [ [2, 4], [3, 4], [3, 8] ];
+        </code>
+    </pre>
+
+    <h3 id="Loops">Loops</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            // for loop
+            for (let i = 0; i <= 10; i++) {
+                console.log(i);
+            }
+    
+            // While loop
+            let i = 0;
+            while (i <= 10) {
+                if (i == 5) {
+                    break;
+                }
+                console.log(i);
+                i++;
+            }
+    
+            // fore of loop
+            let heroes = ["ironman", "spiderman", "thor", "superman", "wonderwoman", "flash"];
+            for (sup of heroes) {
+                console.log(sup); // Print all array
+            }
+    
+            let name = "Azim";
+            for (i of name) {
+                console.log(i); // Print all char
+            }
+    
+            let heros = [["ironman", "spiderman", "thor"], ["superman", "wonderwoman", "flash"]];
+            for (list of heros) {
+                for (sup of list) {
+                    console.log(sup); // Print all Strings
+                }
+            }
+        </code>
+    </pre>
+
+    <h3 id="Objects-Literals">Objects Literals</h3>
+    <hr>
+    <p>Used to store keyed collections & complex entities.</p>
+    <pre>
+        <code class="language-javascript">
+            let student = {
+                name: "Azim",
+                age: 20,
+                DOB: "15/02/2004"
+                subject: ["HTML", "CSS", "JS"] // arry can be used too
+            };
+
+            const student = {
+                name: "Azim",
+                age: 20,
+                DOB: "15/02/2004"
+                subject: ["HTML", "CSS", "JS"]
+            };
+            // Using 'const' means the reference to the object cannot be changed.
+            // But its properties can be modified.
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">Get Values</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            let n = "name";
+
+            console.log(student["name"]);
+            console.log(student[n]);
+            console.log(student.name);
+            // All print name
+        </code>
+    </pre>
+
+    <p>JS automatically converts objects keys to strings.</p>
+    <p>Even if we made the number as a key, the number will be converted to string.</p>
+
+    <p><b><span style="color: #66d9ef;">Add/Update Value</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            student.subject = "IDK"; // Update
+            student.marks = [81, 90, 100]; // Add & Assigned
+            delete student.DOB; // Delete
+        </code>
+    </pre>
+
+    <h3 id="Obiect-of-Objects">Obiect of Objects</h3>
+    <hr>
+    <p>Storing information of multiple students</p>
+    <pre>
+        <code class="language-javascript">
+            const students = {
+                Azim: {
+                    pnoneNumber: "+91 8437947583",
+                    contry: "IN"
+                },
+                Aziz: {
+                    pnoneNumber: "+91 7439847587",
+                    contry: "IN"
+                },
+                Aryan: {
+                    pnoneNumber: "+91 9864947583",
+                    contry: "IN"
+                }
+            }
+
+            // Get Values and Add/Update Value are similar process like a nurmal object
+            students.Aryan.pnoneNumber = "+91 7734579380"
+        </code>
+    </pre>
+
+    <h3 id="Array-of-Objects">Array of Objects</h3>
+    <hr>
+    <p>Storing information of multiple students</p>
+    <pre>
+        <code class="language-javascript">
+            const students = [
+            {
+                name: "Azim",
+                age: 20
+            },
+            {
+                name: "Aziz",
+                age: 21
+            },
+            {
+                name: "Alam",
+                age: 22
+            }
+        ];
+
+        // Get Values and Add/Update Value are similar process like a nurmal object
+        console.log(students[1].name); // Print Aziz
+        </code>
+    </pre>
+
+    <h3 id="Math-Object">Math Object</h3>
+    <hr>
+    <p><b><span style="color: #66d9ef;">Properties</span></b></p>
+    <ul style="background-color: rgba(92, 91, 91, 0.111); padding: 2px; border-radius: 8px;">
+        <li><b>Math.Pl</b>
+            <ul>
+                <li>
+                    <p>Returns: 3.141592653589793</p>
+                </li>
+            </ul>
+        </li>
+        <li><b>Math.E</b>
+            <ul>
+                <li>
+                    <p>Returns: 2.718281828459045</p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <p><b><span style="color: #66d9ef;">Methods</span></b></p>
+    <ul>
+        <li style="background-color: rgba(92, 91, 91, 0.111); padding: 2px; border-radius: 8px;"><b>Math.abs(n)</b>
+            <ul>
+                <li>
+                    <p>Math.abs(2) <span style="opacity: 0.4;">>></span> 2</p>
+                </li>
+
+                <li>
+                    <p>Math.abs(-2) <span style="opacity: 0.4;">>></span> 2</p>
+                </li>
+
+                <li>
+                    <p>Math.abs(4.7) <span style="opacity: 0.4;">>></span> 4.7</p>
+                </li>
+
+                <li>
+                    <p>Math.abs(-4.7) <span style="opacity: 0.4;">>></span> 4.7</p>
+                </li>
+            </ul>
+        </li>
+
+        <br>
+
+        <li style="background-color: rgba(92, 91, 91, 0.111); padding: 2px; border-radius: 8px;"><b>Math-floor(n)</b>
+            <ul>
+                <li>
+                    <p>Math-floor(2) <span style="opacity: 0.4;">>></span> 2</p>
+                </li>
+
+                <li>
+                    <p>Math-floor(-2) <span style="opacity: 0.4;">>></span> -2</p>
+                </li>
+
+                <li>
+                    <p>Math-floor(4.7) <span style="opacity: 0.4;">>></span> 4</p>
+                </li>
+
+                <li>
+                    <p>Math-floor(-4.7) <span style="opacity: 0.4;">>></span> -5</p>
+                </li>
+            </ul>
+        </li>
+
+        <br>
+
+        <li style="background-color: rgba(92, 91, 91, 0.111); padding: 2px; border-radius: 8px;"><b>Math.ceil(n)</b>
+            <ul>
+                <li>
+                    <p>Math.ceil(2) <span style="opacity: 0.4;">>></span> 2</p>
+                </li>
+
+                <li>
+                    <p>Math.ceil(-2) <span style="opacity: 0.4;">>></span> -2</p>
+                </li>
+
+                <li>
+                    <p>Math.ceil(4.7) <span style="opacity: 0.4;">>></span> 5</p>
+                </li>
+
+                <li>
+                    <p>Math.ceil(-4.7) <span style="opacity: 0.4;">>></span> -4</p>
+                </li>
+            </ul>
+        </li>
+
+        <br>
+
+        <li style="background-color: rgba(92, 91, 91, 0.111); padding: 2px; border-radius: 8px;"><b>Math.pow(a, b)</b>
+            <ul>
+                <li>
+                    <p>Math.pow(2,5) <span style="opacity: 0.4;">>></span> 32</p>
+                </li>
+            </ul>
+        </li>
+
+        <br>
+
+        <li style="background-color: rgba(92, 91, 91, 0.111); padding: 2px; border-radius: 8px;">Math.random()
+            <ul>
+                <li>
+                    <p>Returns a ramdom number <br> <small>EX: 0.7553133322042769</small></p>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <h3 id="Random-Number">Random Number</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            // Genarate random number from 1 - 10
+            let num = Math.random();
+            num = num * 10;
+            num = Math.floor(num);
+            num = num + 1;
+    
+            console.log(num);
+    
+            // Short Hand
+            let ramdom = Math.floor(Math.random() * 10) + 1;
+            console.log(ramdom);
+        </code>
+    </pre>
+
+    <h3 id="Functions">Functions</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            function hello(name) {
+                console.log(`Hello, ${name}`);
+    
+                return "Done";
+            }
+    
+            console.log(hello("Azim")); // function calling
+        </code>
+    </pre>
+
+    <pre class="note"><b>function azim(a, b = 10)</b> >> like this deafult parameters is also possible.</pre>
+
+    <p style="color: #66d9ef;"><b>Function Scope</b></p>
+    <p>Scope determines the <b>accessibility</b> of variables, objects, and functions from different parts of the code.
+    </p>
+
+    <pre class="note">Function can acess <b>Global scope veriable</b></pre>
+
+    <p style="color: #66d9ef;"><b>Block Scope</b></p>
+    <p>Variables declared inside a { } block cannot be accessed from outside the block.</p>
+
+    <p style="color: #66d9ef;"><b>Lexical Scope</b></p>
+    <p>a variable defined outside a function can be accessible inside another function defined after the variable
+        declaration.</p>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            function outerFunc() {
+                let x = 5;
+                let y = 7;
+                function innerFunc() {
+                    console.log(x);
+                    console.log(y);
+                }
+                innerFunc(); // x and y can be acessed in innerFunc()
+            }
+    
+            outerFunc();  
+        </code>
+    </pre>
+
+    <h3 id="Function-Expressions">Function Expressions</h3>
+    <hr>
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            let a = 10, b = 20;
+
+            let sum = function (a, b) {
+                return a + b;
+            }
+        </code>
+    </pre>
+
+    <p><b>About Hoisting:</b></p>
+    <p>Hoisting is a mechanism in JavaScript that moves all declaration statements to the top of their scope before code
+        execution. This means that a function or variable can be used before it is declared.</p>
+
+    <h3 id="Methods">Methods</h3>
+    <hr>
+    <p>Actions that can be performed on an object.</p>
+
+    <pre>
+        <code class="language-javascript">
+            const cal0 = {
+                num: 55,
+    
+                add: function (a, b) {
+                    return a + b;
+                },
+    
+                sub: function (a, b) {
+                    return a - b;
+                },
+    
+                mul: function (a, b) {
+                    return a * b;
+                }
+            }
+    
+            // Methods Shorthand
+            const cal = {
+                num: 55,
+    
+                add(a, b) {
+                    return a + b;
+                },
+    
+                sub(a, b) {
+                    return a - b;
+                },
+    
+                mul(a, b) {
+                    return a * b;
+                }
+            }
+    
+            console.log(cal.add(2, 2));
+        </code>
+    </pre>
+
+    <pre class="note">Note: In JS internally all arrays and string are objects</pre>
+
+    <h3 id="This-Keyword">This Keyword</h3>
+    <hr>
+    <p><b>This</b> keyword refers to an object that is executing the current piece of code.</p>
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            const student = {
+                name: "Azim",
+                age: 20,
+                printf() {
+                    // console.log(`Name: ${name} age ${age}`); // Error!!
+                    console.log(`Name: ${this.name} age ${this.age}`);
+                }
+            }
+    
+            console.log(student.printf());  
+        </code>
+    </pre>
+    <pre class="note">Note: The window object in JavaScript represents the browser window.</pre>
+    <pre class="note">For Arrow function "this" is parent's scope > Window</pre>
+
+    <h3 id="try-catch">Try & catch</h3>
+    <hr>
+    <p>The try statement allows you to define a block of code to be tested for errors while it is being executed.</p>
+    <p>The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.</p>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            // let a = 10;
+
+            try {
+                console.log(a);
+            } catch(err) {
+                console.log("Caught an error... a is not defined");
+                console.log(err);
+            }
+        </code>
+    </pre>
+
+    <h3 id="Arrow-Functons">Arrow Functons</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+
+    <pre>
+        <code class="language-javascript">
+            SyntaX: let sum = (arg1, arh2...) => {function definition};
+        </code>
+    </pre>
+    <pre>
+        <code class="language-javascript">
+            let a = 10, b = 10;
+
+            let sum = (a, b) => {
+                return a + b;
+            }
+    
+            console.log(sum(a,b));
+        </code>
+    </pre>
+
+    <pre class="note">For Arrow function "this" is parent's scope > in normal case Window</pre>
+
+    <p><b>Implicit return example:</b></p>
+
+    <pre>
+        <code class="language-javascript">
+            SyntaX: let sum = (arg1, arh2...) => (value)
+        </code>
+    </pre>
+    <pre>
+        <code class="language-javascript">
+            let a = 10, b = 10;
+
+            let sum = (a, b) => (a + b);
+    
+            console.log(sum(a, b));
+        </code>
+    </pre>
+
+    <h3 id="Set-Timeout">Set Timeout</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+
+    <pre>
+        <code class="language-javascript">
+            SyntaX: setTimeout(function, timeout);
+        </code>
+    </pre>
+
+    <pre>
+        <code class="language-javascript">
+            setTimeout(() => {
+                console.log("Hello, Azim!"); // This will print after 5s
+            }, 5000);
+        </code>
+    </pre>
+
+    <h3 id="Set-Interval">Set Interval</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            SyntaX: setInterval(function, timeout);
+        </code>
+    </pre>
+    <pre>
+        <code class="language-javascript">
+            setInterval(() => {
+                console.log("Hello, Azim!"); // This will print this every 5s
+            }, 5000);
+
+            // clearInterval(id); //>> For STOP
+        </code>
+    </pre>
+
+    <h3 id="More">More</h3>
+    <hr>
+
+    <p><b><span style="color: #66d9ef;">Deafult parameters function</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            let a = 10;
+            azim(a);
+            
+            function azim(a, b = 10) {
+            console.log(a + b);
+            }
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">Spread</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+            let narr = [...arr];
+            
+            console.log(narr);
+            console.log(..."SK AZIM"); // Print indivusally
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">Rest</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            // Allows a function to take an indefinite number of arguments and bundle them in an array
+
+            function num(...args) {
+                for (em of args) {
+                    console.log(">>>", em);
+                }
+            }
+            
+            num(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
+        </code>
+    </pre>
+
+    <p><b><span style="color: #66d9ef;">Destructuring</span></b></p>
+    <pre>
+        <code class="language-javascript">
+            // Destructuring is Storing values of array into multiple variables
+
+            let arr = ["Azim1", "Azim2", "Azim3", "Azim3"];
+            let [one, two] = arr;
+            console.log(one, two); // >> Azim1 Azim2
+            
+            // Destructuring in objects
+            let obj = {
+                name: "Azim",
+                age: 20
+            };
+            
+            let { name } = obj;
+            console.log(name); // >> Azim
+            
+            let { name: nam, id = 10 } = obj;
+            console.log(nam, id); // >> Azim
+        </code>
+    </pre>
+
+
+    <h3 id="DOM">DOM</h3>
+    <hr>
+
+    <p>DOM is Document Object Model.</p>
+
+    <h3 id="Selecting-Elements">Selecting Elements</h3>
+    <hr>
+    <pre>
+        <code class="language-javascript">
+            document.getElementById('div_id');
+        </code>
+    </pre>
+    <p>>> Returns the Element as an object or null (if not found)</p>
+    <br>
+
+    <pre>
+        <code class="language-javascript">
+            document.getElementsByClassName('div_class');
+        </code>
+    </pre>
+    <p>>> Returns the Elements as an HTML Collection or empty collection (if not found)</p>
+    <br>
+
+    <pre>
+        <code class="language-javascript">
+            document.getElementsByTagName('h1');
+        </code>
+    </pre>
+    <p>>> Returns the Elements as an HTML Collection or empty collection (if not found)</p>
+    <br>
+
+    <p><b>Query Selectors:</b></p>
+    <p>Allows us to use any CSS selector</p>
+    <pre class="note">You can use all CSS Selector including :nth-of-type</pre>
+    <pre>
+        <code class="language-javascript">
+            // Query Selectors
+            let query1 = document.querySelector('p'); //Selects first p element
+            let query2 = document.querySelector('#div_id'); // Selects first element with id = div_id
+            let query3 = document.querySelector('.div_class'); // Selects first element with class = div_class
+
+            let query4 = document.querySelectorAll('p'); // Selects all p elements
+        </code>
+    </pre>
+
+    <h3 id="Using-Properties">Using Properties & Methods</h3>
+    <hr>
+
+    <pre class="note">Use <b>console.dir(obj)</b> for obj info</pre>
+
+    <p><b><span style="color: #66d9ef;">innerText:</span></b></p>
+    <p>Shows the visible text contained in a node</p>
+
+    <p><b><span style="color: #66d9ef;">textContent:</span></b></p>
+    <p>Shows all the full text</p>
+
+    <p><b><span style="color: #66d9ef;">innerHTML:</span></b></p>
+    <p>Shows the full markup</p>
+
+    <p><b>code:</b></p>
+
+    <pre>
+        <code class="language-javascript">
+            let txt = document.querySelector('#azim');
+            console.dir(txt);
+
+            txt.innerHTML = `This is: ${txt.innerText}`;
+        </code>
+    </pre>
+
+    <h3 id="Manipulating-Attributes">Manipulating Attributes</h3>
+    <hr>
+
+    <p><b>Example:</b></p>
+    <pre>
+        <code class="language-javascript">
+            let name = document.querySelector('#azim');
+
+            console.log(name.getAttribute('id')); // Now id is azim (deafult)
+            name.setAttribute('id', 'red'); // Change id to red
+            console.log(name.getAttribute('id')); // now id is red
+        </code>
+    </pre>
+
+    <p>Like that any attributes can be changes using JS including src, class, ect...</p>
+
+    <h3 id="Manipulating-Style">Manipulating Style</h3>
+    <hr>
+
+    <p><b><span style="color: #66d9ef;">Style Property</span></b></p>
+
+    <pre class="note">In CSS: background-color<br>In JS: backgroundColor</pre>
+
+    <pre>
+        <code class="language-javascript">
+            let h1 = document.querySelector('h1');
+
+            console.log(h1.style);
+            h1.style.backgroundColor = 'red'; // inline style
+        </code>
+    </pre>
+
+    <pre class="note">All stylings are set as inline style it does not change css file style</pre>
+
+    <p><b><span style="color: #66d9ef;">Using ClassList</span></b></p>
+
+    <p>>> obj.classList</p>
+    <p>>> classList.add( ) to add new classes</p>
+    <p>>> classList.remove( ) to remove classes</p>
+    <p>>> classList.contains( ) to check if class exists</p>
+    <p>>> classList.toggIe( ) to toggle between add & remove</p>
+
+    <pre
+        class="note">setAttribute remove all class and set a new class. While classList add new class without removing and class</pre>
+
+    <p><b>Example: </b></p>
+
+    <pre>
+        <code class="language-javascript">
+            let h1 = document.querySelector('h1');
+
+            console.log(h1.classList); // return class list
+            h1.classList.add('bgcolor', 'align');
+            if (h1.classList.contains('color') == true) {  // Return true if class exits
+                h1.classList.remove('color');
+            }
+    
+            h1.classList.toggle('azim'); 
+            // if azim exits then it remove azim and retuen false
+            // Elseif it add new class azim and return true  
+        </code>
+    </pre>
+
+    <h3 id="Navigation">Navigation</h3>
+    <hr>
+
+    <p>>> parentEIement</p>
+    <p>>> children</p>
+    <p>>> previousElementSibling / nextElementSibling</p>
+
+    <pre>
+        <code class="language-javascript">
+            let p = document.querySelector('p');
+            let div = document.querySelector('#div');
+            let FB = document.querySelector('#FB');
+    
+            p.parentElement.style.backgroundColor = 'red';  
+    
+            console.log(div.childElementCount); // return how many childern div have
+            div.children[0].style.backgroundColor = 'red'; // Returns array od childern
+    
+            FB.previousElementSibling.style.backgroundColor = 'blue';
+            FB.nextElementSibling.style.backgroundColor = 'green';
+        </code>
+    </pre>
+
+    <h3 id="Adding-Elements">Adding Elements</h3>
+    <hr>
+
+    <p><b>document.createEIement('p')</b></p>
+    <ul>
+        <li>appendChiId( element )</li>
+        <li>append( element )</li>
+        <li>prepend( element )</li>
+        <li>insertAdjacentElement( position, element )
+            <ul>
+                <li>beforebegin</li>
+                <li>afterbegin</li>
+                <li>beforeend</li>
+                <li>afterend</li>
+            </ul>
+        </li>
+    </ul>
+
+    <p><b>Example:</b></p>
+
+    <pre>
+        <code class="language-javascript">
+            let body = document.querySelector('body');
+            let h1 = document.createElement('h1'); // Create
+    
+            h1.innerHTML = "Hello";
+            body.appendChild(h1); // Append Element
+            h1.append(" World!"); // Append txt
+    
+            let hr = document.createElement('hr');
+            body.prepend(hr); // prepend
+    
+            let hr2 = document.createElement('hr');
+            body.insertAdjacentElement("afterend", hr2);
+        </code>
+    </pre>
+
+    <p><b>Removing Elements</b></p>
+
+    <p>>> removeChild( element )</p>
+    <p>>> remove( element )</p>
+
+    <p><b>Example:</b></p>
+
+    <pre>
+        <code class="language-javascript">
+            let div = document.querySelector('div');
+            let body = document.querySelector('body');
+    
+            body.removeChild(div);
+            body.remove();
+            div.remove();
+        </code>
+    </pre>
+
+    <h3 id="DOM-Events">DOM Events</h3>
+    <hr>
+
+    <p>> Events are signals that something has occurred. (user inputs I actions)</p>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                Onclick Events:
+            </span>
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            let btn = document.querySelector('button');
+
+            function azim() {
+                alert("Alert IDK Why");
+            }
+    
+            btn.onclick = azim; // Do not use () here.
+        </code>
+    </pre>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                Onclick Inline Events:
+            </span>
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            onclick="open()"
+        </code>
+    </pre>
+
+    <br>
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                Onmouseenter Events:
+            </span>
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            let btn = document.querySelector('button');
+
+            btn.onmouseenter = function(){
+                alert('ALERT!!!');
+            }
+        </code>
+    </pre>
+
+    <br>
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                Event Listener:
+            </span>
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            let button = document.querySelector('button');
+
+            function hello() {
+                console.log("Hello ");
+            }
+    
+            function world() {
+                console.log("World!");
+            }
+    
+            button.addEventListener('click', hello);
+            button.addEventListener('click', world);
+        </code>
+    </pre>
+
+    <br>
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                this in Event Listeners
+            </span>
+        </b>
+    </p>
+
+    <p>> When 'this' is used in a callback of event handler of something, it refers to that something.</p>
+
+    <pre>
+        <code class="language-javascript">
+            let btn = document.querySelector('button');
+
+            btn.onclick = function () {
+                this.style.backgroundColor = 'red';
+                // This mense btn. in this case
+            }  
+        </code>
+    </pre>
+
+    <h3 id="Keyboard-Events">Keyboard Events</h3>
+    <hr>
+
+    <p>
+        <b>
+            Keybord keypres eample:
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            let input = document.querySelector('input');
+
+            input.addEventListener('keydown', function (event) {
+                console.log(event.key);
+            });
+        </code>
+    </pre>
+
+    <pre class="note">For more event types <b>Google it</b></pre>
+
+    <h3 id="Form-Events">Form Events</h3>
+    <hr>
+
+    <p>
+        <b>
+            Form submit example:
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            let form = document.querySelector('form');
+
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+    
+                let user = this.elements[0];
+                let pass = this.elements[1];
+    
+                console.log(`Username: ${user.value}`);
+                console.log(`Password: ${pass.value}`);
+            });
+        </code>
+    </pre>
+
+    <h3 id="More-Events">More Events</h3>
+    <hr>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                change event
+            </span>
+        </b>
+    </p>
+
+    <p>>> The change event occurs when the value of an element has been changed (only works on input, textarea and
+        select elements).</p>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                input event
+            </span>
+        </b>
+    </p>
+
+    <p>>> The input event fires when the value of an input, select, or textarea element has been changed.</p>
+
+    <p>
+        <b>
+            Example:
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            let form = document.querySelector('form');
+            form.addEventListener('submit', function (event) {
+                event.preventDefault();
+            });
+    
+            let input = document.querySelector('input');
+            // input.addEventListener('change', function () {
+            input.addEventListener('input', function () {
+                console.log(this.value);
+            });
+        </code>
+    </pre>
+
+    <h3 id="Event_Bubbling">Event Bubbling</h3>
+    <hr>
+
+    <p>
+        <b>
+            Example:
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            let div1 = document.querySelector('#div1');
+            let div2 = document.querySelector('#div2');
+    
+            div1.addEventListener('click', function () {
+                console.log("Div1 is clicked.");
+            });
+    
+            div2.addEventListener('click', function (event) {
+                event.stopPropagation(); // IMP
+                console.log("Div2 is clicked.");
+            });
+        </code>
+    </pre>
+
+    <h3 id="Call-Stack">Call Stack</h3>
+    <hr>
+
+    <p>The call stack is a stack in JavaScript where all function calls are placed while executing code. It helps manage
+        the flow of execution in a JavaScript program.</p>
+
+    <pre class="note">Use breakpoints inside the browser's source option for debugging.</pre>
+
+    <h3 id="Single-Threaded">JavaScript is Single Threaded</h3>
+    <hr>
+
+    <p>JavaScript is a single-threaded language, meaning it can execute only one code block at a time. This implies that
+        JavaScript cannot run multiple pieces of code simultaneously.</p>
+
+    <p>When making API calls or saving data to a database, if the response takes a long time, the JavaScript program
+        cannot wait indefinitely. To handle such situations, </p>
+
+    <p>You can use <b>setTimeout()</b> to manage asynchronous
+        operations. This process is handled by the browser, which is written in multithreaded languages like Java and
+        C++.
+    </p>
+
+    <h3 id="Callback-Hell">Callback Hell Example</h3>
+    <hr>
+
+    <p>This is Callbacks nastimg AKA Callback hell >></p>
+
+    <pre>
+        <code class="language-javascript">
+            function setColor(color, time, nextColorChange) {
+                setInterval(() => {
+                    h1.style.backgroundColor = color;
+                    if (nextColorChange) nextColorChange();
+                }, time);
+            }
+    
+            setColor("red", 1000, () => {
+                setColor("green", 1000, () => {
+                    setColor("blue", 1000, () => {
+                        setColor("black", 1000);
+                    });
+                });
+            });
+    
+            // Callbacks nastimg -> Callback hell
+        </code>
+    </pre>
+
+    <h3 id="Promises">Promises</h3>
+    <hr>
+
+    <p>
+        The Promise object represents the eventual completion (or failure) of an asynchronous operation and its
+        resulting value.
+    </p>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                resolve, reject, then( ) & catch( )
+            </span>
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            // This a dummy DB funcrion
+            function saveToDB(data) {
+                return new Promise((resolve, reject) => {
+                    let internetSpeed = Math.floor(Math.random() * 2);
+                    if (internetSpeed == 1) {
+                        resolve("success : data was saved");
+                    } else {
+                        reject("failure : weak connectionl");
+                    }
+                });
+            }
+    
+            saveToDB("Azim")
+                .then(() => {
+                    console.log("Promise was resolved!");
+                })
+                .catch(() => {
+                    console.log("Promise was rejected!");
+                });
+        </code>
+    </pre>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                Promive Chaning:
+            </span>
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            // This a dummy DB funcrion
+            function saveToDB(data) {
+                return new Promise((resolve, reject) => {
+                    let internetSpeed = Math.floor(Math.random() * 2);
+                    if (internetSpeed == 1) {
+                        resolve("success : data was saved");
+                    } else {
+                        reject("failure : weak connectionl");
+                    }
+                });
+            }
+    
+            saveToDB("Azim1")
+                .then(() => {
+                    console.log("Promise1 was resolved!");
+                    return saveToDB("Azim2");
+                })
+                .then(() => {
+                    console.log("Promise2 was resolved!");
+                    return saveToDB("Azim3");
+                })
+                .then(() => {
+                    console.log("Promise3 was resolved!");
+                })
+                .catch(() => {
+                    console.log("Promise was rejected!");
+                });  
+        </code>
+    </pre>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                Reasult & Error:
+            </span>
+        </b>
+    </p>
+
+    <p>promises are rejected and resolved with some data (valid results or errors)</p>
+
+    <pre>
+        <code class="language-javascript">
+            // This a dummy DB funcrion
+            function saveToDB(data) {
+                return new Promise((resolve, reject) => {
+                    let internetSpeed = Math.floor(Math.random() * 2);
+                    if (internetSpeed == 1) {
+                        resolve("success : data was saved");
+                    } else {
+                        reject("failure : weak connectionl");
+                    }
+                });
+            }
+    
+            saveToDB("Azim1")
+                .then((result) => {
+                    console.log("result of promise: ", result);
+                    console.log("Promise1 was resolved!");
+                    return saveToDB("Azim2");
+                })
+                .then((result) => {
+                    console.log("result of promise: ", result);
+                    console.log("Promise2 was resolved!");
+                    return saveToDB("Azim3");
+                })
+                .then((result) => {
+                    console.log("result of promise: ", result);
+                    console.log("Promise3 was resolved!");
+                })
+                .catch((error) => {
+                    console.log("error of promise: ", error);
+                    console.log("Promise was rejected!");
+                });
+        </code>
+    </pre>
+
+    <h3 id="Promises-Example">Promises Example</h3>
+    <hr>
+
+    <p>Here is a example of Promises for reference</p>
+
+    <pre>
+        <code class="language-javascript">
+            // This a dummy DB funcrion
+            function saveToDB(data) {
+                return new Promise((resolve, reject) => {
+                    let internetSpeed = Math.floor(Math.random() * 2);
+                    if (internetSpeed == 1) {
+                        resolve("success : data was saved");
+                    } else {
+                        reject("failure : weak connectionl");
+                    }
+                });
+            }
+    
+            saveToDB("Azim1")
+                .then((result) => {
+                    console.log("result of promise: ", result);
+                    console.log("Promise1 was resolved!");
+                    return saveToDB("Azim2");
+                })
+                .then((result) => {
+                    console.log("result of promise: ", result);
+                    console.log("Promise2 was resolved!");
+                    return saveToDB("Azim3");
+                })
+                .then((result) => {
+                    console.log("result of promise: ", result);
+                    console.log("Promise3 was resolved!");
+                })
+                .catch((error) => {
+                    console.log("error of promise: ", error);
+                    console.log("Promise was rejected!");
+                });
+        </code>
+    </pre>
+
+    <p>Output if all data are saved sucessfully</p>
+
+    <pre>
+        <code class="language-javascript">
+            // result of promise:  success : data was saved
+            // Promise1 was resolved!
+            // result of promise:  success : data was saved
+            // Promise2 was resolved!
+            // result of promise:  success : data was saved
+            // Promise3 was resolved!  
+        </code>
+    </pre>
+
+    <h3 id="Async-Functions">Async Functions</h3>
+    <hr>
+
+    <p>
+        An
+        <b>
+            <span style="color: #66d9ef;">
+                async
+            </span>
+        </b>
+        function in JavaScript allows you to handle asynchronous operations using `await` to wait for promises,
+        simplifying code flow.
+    </p>
+
+    <p><b><span style="color: #66d9ef;">await </span></b>pauses the execution of its surrounding async function until
+        the promise is settled (resolved or rejected)
+    </p>
+
+    <pre class="note">Async Function can be ushed in arrow function as well</pre>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                Createing an Async Function:
+            </span>
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            async function azim() {
+                return "Hello Azim"; // returns a promise
+            }
+    
+            let azim2 = async () => { } // returns a promise
+    
+            // async alyays returns a promise
+        </code>
+    </pre>
+
+    <p>
+        <b>
+            <span style="color: #66d9ef;">
+                Using .then & .catch:
+            </span>
+        </b>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            async function azim() {
+                throw "404 page not found!";
+                return "Hello Azim";
+            }
+    
+            azim()
+            .then((result) => {
+                console.log("Promise Was resolved!");
+                console.log("result : ", result);
+            })
+            .catch((err) => {
+                console.log("promise was rejected with err : ", err);
+            });
+            
+            // ERROR OUTPUT //
+            // promise was rejected with err :  404 page not found!
+
+            // RESOLVED OUTPUT //
+            // Promise Was resolved!
+            // result :  Hello Azim
+        </code>
+    </pre>
+
+    <h3 id="Async-Functions-Example">Async Functions Example</h3>
+    <hr>
+
+    <pre>
+        <code class="language-javascript">
+            let h1 = document.querySelector('h1');
+
+        function setColor(color, time) {
+            return new Promise((resolve, reject) => {
+                if (true) {
+                    reject("Rejected by Azim");
+                }
+                setTimeout(() => {
+                    h1.style.backgroundColor = color;
+                    console.log(`Color Changed to ${color}`);
+                    resolve(`Color Changed to ${color}`);
+                }, time);
+            });
+        }
+
+        async function call_color() {
+            try { // IMP
+                await setColor("red", 1000);
+                await setColor("green", 1000);
+                await setColor("blue", 1000);
+            } catch (err) {
+                console.log(err);
+            }
+
+            console.log("Print Me");
+            // Use try catch othrt wise this line will not be printrd After an error
+        }
+
+        call_color();
+        </code>
+    </pre>
+
+    <h3 id="API">API</h3>
+    <hr>
+
+    <p>API is Application Programming Interface</p>
+
+    <p>
+        <span style="color: #66d9ef;">
+            Using <b>fetch(url)</b>
+        </span>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            // Random Jokes API
+            let url = 'https://v2.jokeapi.dev/joke/Any?safe-mode';
+    
+            // Fetch function automatically returns a Promise
+            fetch(url)
+                .then((res) => {
+                    console.log(res);
+                    return res.json();
+                })
+                .then((data) => {
+                    console.log(data.setup);
+                    console.log(data.delivery);
+                })
+                .catch((error) => {
+                    console.log("ERROR >> ", error);
+                });
+
+            // Output: It returns a joke.
+        </code>
+    </pre>
+
+    <p>
+        <span style="color: #66d9ef;">
+            Using <b>Async and await</b>
+        </span>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            // Random Jokes API
+            let url = "https://v2.jokeapi.dev/joke/Any?safe-mode";
+    
+            async function getJokes() {
+                try {
+                    let res = await fetch(url);
+                    let data = await res.json();
+                    console.log(data.setup);
+                    console.log(data.delivery);
+                } catch (err) {
+                    console.log("ERROR >> ", err);
+                }
+            }
+    
+            getJokes();
+        </code>
+    </pre>
+
+    <p>
+        <span style="color: #66d9ef;">
+            Using <b>Axios</b>
+        </span>
+    </p>
+
+    <p><b>Axios</b> Library to make HTTP requests</p>
+    <p>Before using Axios add CDN links oe install Axioa</p>
+    <p>Axios: <a href="https://github.com/axios/axios">GitHub</a> link</p>
+
+    <pre>
+        <code class="language-javascript">
+            // Random Jokes API
+            let url = 'https://v2.jokeapi.dev/joke/Any?safe-mode';
+    
+            async function getJokes() {
+                try {
+                    let rsc = await axios.get(url);
+                    console.log(rsc.data.setup);
+                    console.log(rsc.data.delivery);
+                } catch (err) {
+                    console.log("ERROR >> ", err);
+                }
+            }
+    
+            getJokes();
+        </code>
+    </pre>
+
+    <p>
+        <span style="color: #66d9ef;">
+            <b>Axios Sending Headers</b>
+        </span>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            const url = "https://icanhazdadjoke.com/";
+
+            async function azim() {
+                try {
+                    let config = {
+                        headers: {
+                            Accept: "application/json"
+                        }
+                    };
+    
+                    let res = await axios.get(url, config);
+                    console.log(res.data.joke);
+                } catch (err) {
+                    console.log("ERROR >> ", err);
+                }
+            }
+    
+            azim();  
+        </code>
+    </pre>
+
+    <p>
+        <span style="color: #66d9ef;">
+            <b>Axios Updating Query Strings</b>
+        </span>
+    </p>
+
+    <pre>
+        <code class="language-javascript">
+            let url = "http://universities.hipolabs.com/search?name=";
+            let contry = "india";
+    
+            async function azim() {
+                try {
+                    let res = await axios.get(url + contry);
+                    // console.log(res.data);
+                    print(res.data);
+                } catch (err) {
+                    console.log("ERROR >> ", err);
+                }
+            }
+    
+            function print(collage) {
+                for(col of collage){
+                    console.log(col.name);
+                }
+            }
+    
+            azim();
+        </code>
+    </pre>
+
+    <h3 id="OOPs">OOPs</h3>
+    <hr>
+
+    <p>
+        <span style="color: #66d9ef;">
+            <b>Obiect Prototvoes</b>
+        </span>
+    </p>
+
+    <p>Prototypes are the mechanism by which JavaScript objects inherit features from one another.</p>
+
+    <p>It is like a single template object that all objects inherit methods and properties from without having their own
+        copy.</p>
+
+    <p>very object in JavaScript has a built-in property, which is called its prototype.</p>
+
+    <p>
+        <span style="color: #66d9ef;">
+            <b>Factory Functions</b>
+        </span>
+    </p>
+
+    <p>A function that create objects</p>
+
+    <p>>> Avoid using factory functions because they do not leverage prototypal inheritance, which can lead to
+        inefficient memory usage and lack of method sharing.</p>
+    <p>Example:</p>
+
+    <pre>
+        <code class="language-javascript">
+            // Avoid using
+
+            function PersonMaker(name, age) {
+                const person = {
+                    name: name,
+                    age: age,
+                    talk() {
+                        console.log(`Hi, my name is ${this.name}`);
+                    }
+                };
+                return person;
+            }
+            
+            const adam = PersonMaker("Adam", 25);
+            const eve = PersonMaker("Eve", 25);
+            adam.talk(); // Outputs: Hi, my name is Adam
+            eve.talk(); // Outputs: Hi, my name is Eve
+        </code>
+    </pre>
+
+    <p>
+        <span style="color: #66d9ef;">
+            <b>Classes</b>
+        </span>
+    </p>
+
+    <p>> The `new` operator lets developers create an instance of a user-defined object type or of one of the built-in
+        object types that has a constructor function.</p>
+
+    <p>> Classes are a template for creating objects</p>
+
+    <p>> The constructor method is a special method of a class for creating and initializing an
+        object instance of that class.</p>
+    <p>Example:</p>
+
+    <pre>
+        <code class="language-javascript">
+            class Person {
+                constructor(name, age) {
+                    this.name = name; // This mense line no 11 `azim`;
+                    this.age = age;
+                }
+                talk() { // >> This is now prototype
+                    return `Hi, my name is ${this.name}`;
+                }
+            }
+            
+            let azim = new Person("Azim", 20);
+            console.log(azim.name);
+            console.log(azim.talk());
+        </code>
+    </pre>
+
+    <p><b>>>> JS engine internally execute the 👆 above code like this 👇</b></p>
+
+    <pre>
+        <code class="language-javascript">
+            function Person(name, age) {
+                this.name = name;
+                this.age = age;
+            }
+            
+            Person.prototype.talk = function() {
+                return `Hi, my name is ${this.name}`;
+            };
+            
+            let azim = new Person("Azim", 20);
+            console.log(azim.name);
+            console.log(azim.talk());
+        </code>
+    </pre>
+
+    <p>
+        <span style="color: #66d9ef;">
+            <b>Inheritance</b>
+        </span>
+    </p>
+
+    <p>Inheritance is a mechanism that allows us to create new classes on the basis of already existing classes.</p>
+
+    <p>Example:</p>
+
+    <pre>
+        <code class="language-javascript">
+            class Person {
+                constructor(name, age) {
+                    this.name = name;
+                    this.age = age;
+                }
+                talk() {
+                    return `Hi, my name is ${this.name}`;
+                }
+            }
+            
+            class Student extends Person {
+                constructor(name, age, marks) {
+                    super(name, age);
+                    this.marks = marks;
+                }
+            }
+            
+            let p1 = new Person("Azim", 20);
+            console.log(p1);
+            
+            let s1 = new Student("Azim", 20, 90);
+            console.log(s1);
+        </code>
+    </pre>
+
+    <footer id="END">
+        <br>
+        <hr style="opacity: 0.2;">
+        <h5><a href="#" target="_blank" style="color: white; font-weight: no;">DOCUMENTED BY SK AZIM</a></h5>
+        <hr style="opacity: 0.2;">
+    </footer>
+
+    <script src="assets/prism.js"></script>
+    <script src="assets/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            height: 50px;
+            background-color: green;
+            position: fixed; /* Fixed position */
+            width: 100%; /* Take the full width of the viewport */
+            top: 0; /* Position at the top */
+            z-index: 1; /* Ensure the header appears above other content */
+        }
+
+        .content {
+            margin-top: 50px; /* Adjust content margin to accommodate fixed header */
+            height: calc(100vh - 50px); /* Calculate remaining height after subtracting header height */
+            overflow-y: auto; /* Enable vertical scrolling for content if needed */
+            background-color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">header</div>
+        <div class="content"> <!-- Add overflow-y: auto; to enable scrolling -->
+            <!-- Content goes here -->
+            <!-- Add more content if needed to see scrolling -->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente reprehenderit nisi error, quo est aspernatur voluptate nemo qui fugiat, id sunt voluptatum accusantium omnis sit animi mollitia culpa, enim cupiditate? lo
+        </div>
+    </div>
+</body>
+
+</html>

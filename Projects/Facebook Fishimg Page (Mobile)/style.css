@@ -1,0 +1,183 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.PC {
+    height: 100vh;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width:767px) {
+    .PC {
+        display: none;
+    }
+
+    .mobile {
+        display: flex;
+        flex-direction: column;
+        /* height: 100vh; */
+    }
+
+    /* Top */
+    .mobile_top {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: #FFFBE2;
+        height: 3.1rem;
+        width: 100%;
+    }
+
+    .mobile_top img {
+        height: 2.45rem;
+        margin-left: 0.6rem;
+        margin-right: 0.3rem;
+    }
+
+    .mobile_top a {
+        color: #3B5998;
+        font-size: 0.88rem;
+        font-weight: normal;
+        text-decoration: none;
+    }
+
+
+    /* Main */
+    .mobile_main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile_main .fb_logo svg {
+        margin-top: 0.468rem;
+        height: 2.62rem;
+    }
+
+    .mobile_main .login form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mobile_main .login input {
+        width: 167%;
+        height: 1.5rem;
+        padding: 0.6rem;
+        margin-bottom: 0.38rem;
+        background-color: #F5F6F7;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+        box-shadow: 0 0.8px 0px rgba(0, 0, 0, 0.074);
+    }
+
+    .mobile_main .login button {
+        width: 177%;
+        height: 2.6rem;
+        margin-top: 0.32rem;
+        margin-bottom: 0.8rem;
+        font-size: 17px;
+        font-weight: 700;
+        background-color: #1877F2;
+        color: #FFF;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .mobile_main .forgotten_pss a {
+        font-size: 14px;
+        text-decoration: none;
+        color: #1877F2;
+    }
+
+
+    /* Or Line */
+    .or_hr {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .or_hr p {
+        opacity: 0.7;
+        margin: 1rem 0.8rem 1rem 0.8rem;
+    }
+
+    .or_hr span {
+        opacity: 0.2;
+        box-shadow: 0 0.5px 0px rgba(0, 0, 0, 0.143);
+        width: 158px;
+        height: 0.8px;
+        background-color: black;
+        border-radius: 1px solid black;
+    }
+
+    #nrw_account {
+        width: 290px;
+        height: 2.3rem;
+        font-size: 13.8px;
+        font-weight: 600;
+        background-color: white;
+        color: black;
+        border: 1px solid rgba(0, 0, 0, 0.24);
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    /* Bottom */
+    .mobile_bottom {
+        display: flex;
+        flex-direction: column;
+        margin-top: 100px;
+    }
+
+    .languages {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .languages a {
+        font-size: small;
+        text-decoration: none;
+        color: #576B95;
+    }
+
+    #English {
+        color: #90949C;
+    }
+
+    #plush_icon {
+        width: 28px;
+    }
+
+    .meta p {
+        text-align: center;
+        font-size: small;
+        opacity: 0.5;
+    }
+}

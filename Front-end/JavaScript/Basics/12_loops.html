@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // for loop
+        for (let i = 0; i <= 10; i++) {
+            console.log(i);
+        }
+
+        // While loop
+        let i = 0;
+        while (i <= 10) {
+            if (i == 5) {
+                break;
+            }
+            console.log(i);
+            i++;
+        }
+
+        // fore of loop
+        let heroes = ["ironman", "spiderman", "thor", "superman", "wonderwoman", "flash"];
+        for (sup of heroes) {
+            console.log(sup); // Print all Strings
+        }
+
+        let name = "Azim";
+        for (i of name) {
+            console.log(i); // Print all char
+        }
+
+        let heros = [["ironman", "spiderman", "thor"], ["superman", "wonderwoman", "flash"]];
+        for (list of heros) {
+            for (sup of list) {
+                console.log(sup);
+            }
+        }
+
+    </script>
+</body>
+
+</html>

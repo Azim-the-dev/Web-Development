@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let body = document.querySelector('body');
+        let h1 = document.createElement('h1'); // Create
+
+        h1.innerHTML = "Hello";
+        body.appendChild(h1); // Append Element
+        h1.append(" World!"); // Append txt
+
+        let hr = document.createElement('hr');
+        body.prepend(hr); // prepend
+
+        let hr2 = document.createElement('hr');
+        body.insertAdjacentElement("afterend", hr2);
+    </script>
+</body>
+
+</html>

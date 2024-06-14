@@ -1,0 +1,1 @@
+module.exports = "This is Call of duty";

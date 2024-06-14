@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onclick</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            background-color: #1f1f1f;
+        }
+
+        body {
+            height: 100vh;
+            background-color: cornflowerblue;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: opacity 1s ease; /* Transition for smooth fade-out */
+        }
+
+        div {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        h1:hover {
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1 onclick="Destroy()">Don't Click</h1>
+    </div>
+
+    <script>
+        function Destroy() {
+            let body = document.querySelector('body');
+
+            // Add a class to start the fade-out animation
+            body.style.opacity = '0';
+
+            // Wait for the transition to complete, then remove the body element
+            setTimeout(() => {
+                body.remove();
+            }, 1000); // The delay matches the transition duration (1 second)
+        }
+    </script>
+</body>
+
+</html>

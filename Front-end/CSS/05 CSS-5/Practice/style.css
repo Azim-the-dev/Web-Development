@@ -1,0 +1,31 @@
+body {
+    display: flex;
+}
+
+.Card {
+    width: 200px;
+    height: 400px;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 0.5px 10px black;
+    transition: 0.4s;
+    display: flex;
+    flex-direction: column;
+}
+
+.Desc {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+img {
+    height: 70%;
+    border-radius: 8px 8px 0 0;
+}
+
+.Card:hover {
+    box-shadow: 6px 1px 15px goldenrod;
+}
+
+/* Not Fixed */
