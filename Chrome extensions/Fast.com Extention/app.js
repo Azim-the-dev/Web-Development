@@ -80,8 +80,13 @@ btn2.addEventListener("click", () => {
 
 // Credit
 let a = document.createElement("a");
-a.innerHTML = " • Extention By Azim";
+a.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;Extention By Azim";
 a.style.textDecoration = "none";
+a.style.color = "black";
 a.setAttribute("href", "https://github.com/Azim-me");
-// document.getElementsByClassName("privacy-link-container")[0].prepend(a);
 document.getElementById("privacy-link").append(a);
+let style = document.createElement("style");
+style.innerHTML = `.no-hover:hover { color: black; }`;
+document.head.append(style);
+let privacy = document.getElementById("privacy-link");
+privacy.classList.add("no-hover");
