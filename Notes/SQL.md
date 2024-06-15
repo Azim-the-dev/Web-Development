@@ -207,3 +207,6 @@ EXAMPLE:
 SELECT  max(followers)
 FROM user;
 ```
+
+## Group by Clause
+

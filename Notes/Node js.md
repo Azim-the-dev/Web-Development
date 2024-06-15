@@ -28,7 +28,7 @@ azim2
 
 ## module-exports (require)
 
-require() a built-in function to include external modules that exist in separate files.
+require( ) a built-in function to include external modules that exist in separate files.
 
 module.exports a special object
 

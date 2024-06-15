@@ -79,6 +79,9 @@ btn2.addEventListener("click", () => {
 });
 
 // Credit
-const credit = document.querySelector(".privacy-link");
-credit.innerHTML = "Modified by Azim";
-credit.setAttribute("href", "https://www.instagram.com/itx_azzim/");
+let a = document.createElement("a");
+a.innerHTML = " • Extention By Azim";
+a.style.textDecoration = "none";
+a.setAttribute("href", "https://github.com/Azim-me");
+// document.getElementsByClassName("privacy-link-container")[0].prepend(a);
+document.getElementById("privacy-link").append(a);
