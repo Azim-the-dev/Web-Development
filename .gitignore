@@ -5,3 +5,5 @@ X/
 Open source projects/
 
 **/node_modules
+
+.vscode/

@@ -1,15 +1,16 @@
 {
+  "type": "module",
   "dependencies": {
-    "express": "^4.19.2",
-    "nodemon": "^3.1.4"
+    "@faker-js/faker": "^8.4.1",
+    "mysql2": "^3.10.1"
   },
-  "name": "express",
+  "name": "sql-with-node-js",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Sk Azim",
+  "author": "Azim",
   "license": "ISC",
   "description": ""
 }
