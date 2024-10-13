@@ -3,7 +3,7 @@ const button = document.getElementById("button");
 const result = document.getElementById("result");
 const today = new Date().toISOString().slice(0, 10);
 
-button.addEventListener("click", function () {
+function calculate() {
     if (birthDate.value === "") {
         result.innerHTML = "Please select a date";
         return;
@@ -16,7 +16,7 @@ button.addEventListener("click", function () {
     } else {
         result.innerHTML = age();
     }
-});
+}
 
 function age() {
     const birth = new Date(birthDate.value);
@@ -33,3 +33,13 @@ function age() {
         return `You are ${years} years, ${months} months, and ${days} days old`;
     }
 }
+
+button.addEventListener("click", function () {
+    calculate();
+});
+
+birthDate.addEventListener('input', () => {
+    if (birthDate.value !== "") {
+        calculate();
+    }
+});

@@ -3,6 +3,7 @@ import mysql from "mysql2/promise";
 
 function randomUser() {
   return [
+    faker.datatype.uuid(),
     faker.internet.userName(),
     faker.internet.email(),
     faker.internet.password()
@@ -16,18 +17,19 @@ const connection = await mysql.createConnection({
   password: "7786",
 });
 
-let query = "INSERT INTO user (name, email, password) VALUES ?";
+let query = "INSERT INTO user (id, name, email, password) VALUES ?";
 let user = [];
 
 for (let i = 0; i <= 100; i++) {
   user.push(randomUser());
 }
 
+
 try {
   const [results, fields] = await connection.query(query, [user]);
 
   console.log(results);
-  console.log(fields);
+  // console.log(fields);
 } catch (err) {
   console.log(err);
 }

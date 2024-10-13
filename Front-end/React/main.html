@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Destroy the Web</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .destroyed {
+            display: none;
+        }
+
+        button {
+            margin: 20px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="startGame">Start Destroying!</button>
+    <div id="content">
+        <p>Click on elements to destroy them.</p>
+        <div>Some content here.</div>
+        <div>Another piece of content.</div>
+    </div>
+
+    <script>
+        document.getElementById('startGame').addEventListener('click', function () {
+            document.querySelectorAll('#content *').forEach(function (element) {
+                element.addEventListener('click', function () {
+                    this.classList.add('destroyed');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
